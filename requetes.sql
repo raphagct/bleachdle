@@ -1,0 +1,22 @@
+INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc)
+VALUES
+    ('Ichigo Kurosaki', 'Homme', '17', 'Humain, Shinigami, Hollow, Fullbringer', 'Ville de Karakura', 'Bankai, Fullbring', 'Lycéen, Shinigami remplaçant', 'Prélude'),
+    ('Rukia Kuchiki', 'Femme', '150', 'Shinigami', 'Gotei 13 (13ème division)', 'Shikai', 'Lieutenant', 'Prélude'),
+    ('Renji Abarai', 'Homme', '150', 'Shinigami', 'Gotei 13 (6ème division)', 'Bankai', 'Vice-capitaine', 'Prélude'),
+    ('Byakuya Kuchiki', 'Homme', '200', 'Shinigami', 'Gotei 13 (6ème division)', 'Bankai', 'Capitaine', 'Prélude'),
+    ('Orihime Inoue', 'Femme', '17', 'Humain', 'Ville de Karakura', 'Aucune', 'Lycéenne', 'Prélude'),
+    ('Uryū Ishida', 'Homme', '17', 'Quincy', 'Ville de Karakura', 'Aucune', 'Lycéen', 'Prélude'),
+    ('Yasutora Sado', 'Homme', '18', 'Humain, Fullbringer', 'Ville de Karakura', 'Fullbring', 'Lycéen', 'Prélude'),
+    ('Toshiro Hitsugaya', 'Homme', '100', 'Shinigami', 'Gotei 13 (10ème division)', 'Bankai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Kisuke Urahara', 'Homme', '300', 'Shinigami', 'Ville de Karakura', 'Bankai', "Propriétaire d'un magasin", 'Prélude'),
+    ('Mayuri Kurotsuchi', 'Homme', '200', 'Shinigami', 'Gotei 13', 'Bankai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Shunsui Kyoraku', 'Homme', '200', 'Shinigami', 'Gotei 13', 'Bankai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Jūshirō Ukitake', 'Homme', '200', 'Shinigami', 'Gotei 13', 'Bankai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Sōsuke Aizen', 'Homme', '200', 'Shinigami, Arrancar', 'Arrancar', 'Shikai, Hōgyoku', 'Capitaine, Traître', 'Arc de la Soul Society'),
+    ('Ichimaru Gin', 'Homme', '100', 'Shinigami', 'Gotei 13', 'Shikai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Kaname Tōsen', 'Homme', '100', 'Shinigami', 'Gotei 13', 'Shikai', 'Capitaine', 'Arc de la Soul Society'),
+    ('Ulquiorra Cifer', 'Homme', '250', 'Arrancar', 'Espada', 'Resurrección', 'Espada numéro 4', 'Arrancar'),
+    ('Grimmjow Jaegerjaquez', 'Homme', '250', 'Arrancar', 'Espada', 'Resurrección', 'Espada numéro 6', 'Arrancar'),
+    ('Nnoitra Gilga', 'Homme', '250', 'Arrancar', 'Espada', 'Resurrección', 'Espada numéro 5', 'Arrancar'),
+    ('Barragan Luisenbarn', 'Homme', '500', 'Arrancar', 'Espada', 'Resurrección', 'Espada numéro 2', 'Arrancar'),
+    ('Coyote Starrk', 'Homme', '300', 'Arrancar', 'Espada', 'Resurrección', 'Espada numéro 1', 'Arrancar');
