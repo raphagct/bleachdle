@@ -1,8 +1,12 @@
-.container-mode {
+.mode-wrapper {
   display: flex;
   align-items: center;
   height: 100vh;
-  margin-left: 5%;
+  padding: 0 5%;
+  justify-content: space-between; // Pour espacer le menu et l'image
+}
+
+.container-mode {
   ul {
     list-style: none;
 
@@ -11,14 +15,24 @@
       font-size: 3em;
       transition: transform 0.3s ease;
     }
+
     li:hover {
       cursor: pointer;
       transform: translateY(-10px);
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
   }
+}
 
+.image-container {
+  flex-shrink: 0;
+  img {
+    max-height: 90vh;
+    height: auto;
+    width: auto;
+  }
 }
