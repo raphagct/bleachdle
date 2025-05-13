@@ -1,29 +1,33 @@
+<app-search-bar
+  [concernedCharacters]="characters"
+  (chosenCharacter)="onCharacterSelected($event)">
+</app-search-bar>
 
-<table *ngFor="let character of characters">
-  <tr>
+<table *ngIf="selectedCharacters.length > 0">
+  <tr *ngFor="let selectedCharacter of selectedCharacters">
     <td>
-      <h2>Nom: {{ character.name }}</h2>
+      <h2>Nom: {{ selectedCharacter?.name }}</h2>
     </td>
     <td>
-      <p>Genre: {{ character.gender }}</p>
+      <p>Genre: {{ selectedCharacter?.gender }}</p>
     </td>
     <td>
-      <p>Age: {{ character.age }}</p>
+      <p>Age: {{ selectedCharacter?.age }}</p>
     </td>
     <td>
-      <p>Affiliation: {{ character.affiliation }}</p>
+      <p>Affiliation: {{ selectedCharacter?.affiliation }}</p>
     </td>
     <td>
-      <p>Race: {{ character.race}}</p>
+      <p>Race: {{ selectedCharacter?.race}}</p>
     </td>
     <td>
-      <p>Forme évolutive: {{ character.evolutive_forms }}</p>
+      <p>Forme évolutive: {{ selectedCharacter?.evolutive_forms }}</p>
     </td>
     <td>
-      <p>Rang: {{ character.rank }}</p>
+      <p>Rang: {{ selectedCharacter?.rank }}</p>
     </td>
     <td>
-      <p>Arc d'introduction: {{ character.introduction_arc }}</p>
+      <p>Arc d'introduction: {{ selectedCharacter?.introduction_arc }}</p>
     </td>
   </tr>
 </table>

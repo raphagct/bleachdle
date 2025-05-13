@@ -1,0 +1,8 @@
+
+  <p-autoComplete
+    [(ngModel)]="value"
+    [suggestions]="filteredCharacters"
+    (completeMethod)="filterCharacters($event)"
+    (onSelect)="characterSelected($event)"
+    field = name>
+  </p-autoComplete>
