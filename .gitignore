@@ -1,0 +1,22 @@
+# Default ignored files
+/shelf/
+.idea/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+# Ignore IntelliJ IDEA configuration files and directories
+.idea/
+# Local history files (IntelliJ IDEA)
+.idea/.idea_modules/
+.idea/.iml/
+.idea/modules.xml
+# Ignore project files for Eclipse, NetBeans, etc.
+.classpath
+.project
+# Ignore build directories and temporary files
+*.log
+*.class
+*.tmp
+*.bak
+*.swp
