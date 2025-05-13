@@ -21,16 +21,23 @@ export class SearchBarComponent  {
   @Output() chosenCharacter = new EventEmitter<Character>();
   filteredCharacters: Character[] = [];
   value: any;
+  selectedCharacters: Character[] = [];
 
   filterCharacters(event: any) {
     const query = event.query.toLowerCase();
-    this.filteredCharacters = this.concernedCharacters.filter(character =>
+    this.filteredCharacters = this.concernedCharacters
+      .filter(character =>
       character.name.toLowerCase().includes(query)
-    );
+      )
+      .filter(character =>
+        !this.selectedCharacters.includes(character)
+      );
   }
 
   characterSelected(event: AutoCompleteSelectEvent) {
-    this.chosenCharacter.emit(event.value as Character);
+    const selected = event.value as Character;
+    this.chosenCharacter.emit(selected);
+    this.selectedCharacters.push(selected);
     this.value = '';
   }
 }

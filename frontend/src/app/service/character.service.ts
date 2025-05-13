@@ -19,4 +19,8 @@ export class CharacterService {
   getCharacterById(id: number): Observable<Character> {
     return this.http.get<Character>(`${this.apiUrl}/${id}`);
   }
+
+  getDaiyCharacter() : Observable<Character> {
+    return this.http.get<Character>(`${this.apiUrl}/daily`);
+  }
 }

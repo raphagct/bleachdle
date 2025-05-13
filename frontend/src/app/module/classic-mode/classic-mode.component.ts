@@ -3,7 +3,8 @@ import {Character} from '../../model/character';
 import {CharacterService} from '../../service/character.service';
 import {FormsModule} from '@angular/forms';
 import {SearchBarComponent} from '../../core/components/search-bar/search-bar.component';
-import {NgForOf, NgIf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-classic-mode',
@@ -11,7 +12,9 @@ import {NgForOf, NgIf} from '@angular/common';
     FormsModule,
     SearchBarComponent,
     NgIf,
-    NgForOf
+    NgForOf,
+    NgClass,
+    RouterLink
   ],
   templateUrl: './classic-mode.component.html',
   styleUrl: './classic-mode.component.scss'
@@ -19,20 +22,39 @@ import {NgForOf, NgIf} from '@angular/common';
 export class ClassicModeComponent implements OnInit {
   characters: Character[] = [];
   selectedCharacters: Character[] = [];
-
+  characterToGuess!: Character;
+  isFind : boolean = false;
+  attributes: string[] = ['name', 'gender', 'age', 'affiliation', 'race', 'evolutive_forms', 'rank', 'introduction_arc',];
 
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
     this.characterService.getAllCharacters().subscribe(data => {
       this.characters = data;
-      console.log('Characters:', this.characters);
     });
+    this.characterService.getDaiyCharacter().subscribe(data => {
+      this.characterToGuess = data;
+      });
   }
 
   onCharacterSelected(character: Character) {
     this.selectedCharacters.push(character);
+    if (character.id == this.characterToGuess.id){
+      this.isFind = true;
+    }
   }
+
+  getAttributeStatus(characterAttr: string, targetAttr: string): 'match' | 'partial' | 'miss' {
+    if(characterAttr === targetAttr){
+      return 'match';
+    } else if(characterAttr.includes(targetAttr)){
+      return 'partial';
+    }else{
+      return 'miss';
+    }
+  }
+
+
 
 
 }

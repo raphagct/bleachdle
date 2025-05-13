@@ -9,33 +9,41 @@
     (chosenCharacter)="onCharacterSelected($event)">
   </app-search-bar>
 
-  <table *ngIf="selectedCharacters.length > 0">
+<div *ngIf="!isFind; else finded">
+  <table *ngIf="selectedCharacters.length > 0 ">
     <tr *ngFor="let selectedCharacter of selectedCharacters">
-      <td>
-        <p>Nom: {{ selectedCharacter?.name }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.name || '', characterToGuess.name || '')">
+        <p>Nom: {{ selectedCharacter.name }}</p>
       </td>
-      <td>
-        <p>Genre: {{ selectedCharacter?.gender }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.gender || '', characterToGuess.gender || '')">
+        <p>Genre: {{ selectedCharacter.gender }}</p>
       </td>
-      <td>
-        <p>Age: {{ selectedCharacter?.age }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.age || '', characterToGuess.age || '')">
+        <p>Age: {{ selectedCharacter.age }}</p>
       </td>
-      <td>
-        <p>Affiliation: {{ selectedCharacter?.affiliation }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliation || '', characterToGuess.affiliation || '')">
+        <p>Affiliation: {{ selectedCharacter.affiliation }}</p>
       </td>
-      <td>
-        <p>Race: {{ selectedCharacter?.race}}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
+        <p>Race: {{ selectedCharacter.race }}</p>
       </td>
-      <td>
-        <p>Forme évolutive: {{ selectedCharacter?.evolutive_forms }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.evolutive_forms || '', characterToGuess.evolutive_forms || '')">
+        <p>Forme évolutive: {{ selectedCharacter.evolutive_forms }}</p>
       </td>
-      <td>
-        <p>Rang: {{ selectedCharacter?.rank }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.rank || '', characterToGuess.rank || '')">
+        <p>Rang: {{ selectedCharacter.rank }}</p>
       </td>
-      <td>
-        <p>Arc d'introduction: {{ selectedCharacter?.introduction_arc }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
+        <p>Arc d'introduction: {{ selectedCharacter.introduction_arc }}</p>
       </td>
     </tr>
   </table>
+</div>
+
+  <ng-template #finded>
+    Bravo, vous avez trouvé le personnage du jour qui était : {{ characterToGuess.name}} !
+    <a routerLink="/bankai">BANKAI</a>
+  </ng-template>
+
 </div>
 
