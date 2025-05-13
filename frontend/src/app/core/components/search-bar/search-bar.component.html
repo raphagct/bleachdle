@@ -1,8 +1,11 @@
-
+<p-floatlabel>
   <p-autoComplete
     [(ngModel)]="value"
     [suggestions]="filteredCharacters"
     (completeMethod)="filterCharacters($event)"
     (onSelect)="characterSelected($event)"
-    field = name>
+    field = name
+    size="large">
   </p-autoComplete>
+  <label>Entrez un personnage</label>
+</p-floatlabel>
