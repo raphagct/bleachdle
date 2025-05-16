@@ -3,6 +3,7 @@ import {Character} from '../../../model/character';
 import {AutoComplete, AutoCompleteSelectEvent} from 'primeng/autocomplete';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FloatLabel} from 'primeng/floatlabel';
+import {PrimeTemplate} from 'primeng/api';
 
 @Component({
   selector: 'app-search-bar',
@@ -11,7 +12,8 @@ import {FloatLabel} from 'primeng/floatlabel';
     AutoComplete,
     ReactiveFormsModule,
     FormsModule,
-    FloatLabel
+    FloatLabel,
+    PrimeTemplate
   ],
   templateUrl: './search-bar.component.html',
   styleUrl: './search-bar.component.scss'

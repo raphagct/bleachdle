@@ -20,7 +20,7 @@ export class CharacterService {
     return this.http.get<Character>(`${this.apiUrl}/${id}`);
   }
 
-  getDaiyCharacter() : Observable<Character> {
+  getDailyCharacter() : Observable<Character> {
     return this.http.get<Character>(`${this.apiUrl}/daily`);
   }
 }

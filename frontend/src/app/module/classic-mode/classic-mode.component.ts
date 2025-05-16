@@ -25,6 +25,7 @@ export class ClassicModeComponent implements OnInit {
   characterToGuess!: Character;
   isFind : boolean = false;
   attributes: string[] = ['name', 'gender', 'age', 'affiliation', 'race', 'evolutive_forms', 'rank', 'introduction_arc',];
+  attributesFormatted: string[] = ['Nom', 'Genre', 'Age', 'Affiliation', 'Race', 'Formes évolutives', 'Rang', "Arc d'introduction"];
 
   constructor(private characterService: CharacterService) {}
 
@@ -32,7 +33,7 @@ export class ClassicModeComponent implements OnInit {
     this.characterService.getAllCharacters().subscribe(data => {
       this.characters = data;
     });
-    this.characterService.getDaiyCharacter().subscribe(data => {
+    this.characterService.getDailyCharacter().subscribe(data => {
       this.characterToGuess = data;
       });
   }
@@ -52,6 +53,8 @@ export class ClassicModeComponent implements OnInit {
     }else{
       return 'miss';
     }
+
+
   }
 
 

@@ -8,5 +8,5 @@ export interface Character {
   evolutive_forms: string;
   rank: string;
   introduction_arc: string;
-
+  image: string;
 }
