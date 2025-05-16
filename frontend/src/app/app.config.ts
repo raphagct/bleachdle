@@ -8,6 +8,11 @@ import {provideHttpClient} from '@angular/common/http';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {providePrimeNG} from 'primeng/config';
 
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+  document.querySelector('html')?.classList.add('my-app-dark');
+}
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),

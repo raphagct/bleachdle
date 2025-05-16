@@ -19,6 +19,9 @@ export class LandingPageComponent {
     const element = document.querySelector('html');
     if (element) {
       element.classList.toggle('my-app-dark');
+
+      const isDarkMode = element.classList.contains('my-app-dark');
+      localStorage.setItem('darkMode', String(isDarkMode));
     }
   }
 }
