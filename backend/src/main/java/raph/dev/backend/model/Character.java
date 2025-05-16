@@ -20,5 +20,6 @@ public class Character {
     private String evolutive_forms;
     private String rank;
     private String introduction_arc;
+    private String image;
 
 }
