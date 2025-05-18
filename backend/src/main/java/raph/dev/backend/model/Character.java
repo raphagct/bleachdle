@@ -16,9 +16,9 @@ public class Character {
     private String gender;
     private String age;
     private String race;
-    private String affiliation;
-    private String evolutive_forms;
-    private String rank;
+    private String affiliations;
+    private String attributes;
+    private String hierarchy;
     private String introduction_arc;
     private String image;
 

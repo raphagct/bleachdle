@@ -24,8 +24,8 @@ export class ClassicModeComponent implements OnInit {
   selectedCharacters: Character[] = [];
   characterToGuess!: Character;
   isFind : boolean = false;
-  attributes: string[] = ['name', 'gender', 'age', 'affiliation', 'race', 'evolutive_forms', 'rank', 'introduction_arc',];
-  attributesFormatted: string[] = ['Nom', 'Genre', 'Age', 'Affiliation', 'Race', 'Formes évolutives', 'Rang', "Arc d'introduction"];
+  attributes: string[] = ['name', 'gender', 'affiliations', 'race', 'attributes', 'hierarchy', 'introduction_arc',];
+  attributesFormatted: string[] = ['', 'Nom', 'Genre', 'Affiliations', 'Race', 'Attributs', 'Hiérarchie', "Arc d'introduction"];
 
   constructor(private characterService: CharacterService) {}
 
@@ -45,7 +45,8 @@ export class ClassicModeComponent implements OnInit {
     }
   }
 
-  getAttributeStatus(characterAttr: string, targetAttr: string): 'match' | 'partial' | 'miss' {
+  getAttributeStatus(characterAttr: string, targetAttr: string ): 'match' | 'partial' | 'miss' {
+
     if(characterAttr === targetAttr){
       return 'match';
     } else if(characterAttr.includes(targetAttr)){
@@ -53,9 +54,11 @@ export class ClassicModeComponent implements OnInit {
     }else{
       return 'miss';
     }
-
-
   }
+
+
+
+
 
 
 

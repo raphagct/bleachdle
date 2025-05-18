@@ -4,6 +4,11 @@ td {
   border: 1px solid;
 }
 
+#image {
+  padding: 0;
+  margin: 0;
+
+}
 .top-side {
   display: flex;
   align-content: center;
@@ -12,7 +17,7 @@ td {
   h1 {
     font-size: 4em;
   }
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 .container {

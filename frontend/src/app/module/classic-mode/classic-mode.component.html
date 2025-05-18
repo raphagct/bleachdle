@@ -17,26 +17,26 @@
         </th>
     </tr>
     <tr *ngFor="let selectedCharacter of selectedCharacters">
+      <td id="image">
+        <img [src]="selectedCharacter.image + '.jpg'"  [alt]=selectedCharacter.id height="80px" width="80px">
+      </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.name || '', characterToGuess.name || '')">
         <p>{{ selectedCharacter.name }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.gender || '', characterToGuess.gender || '')">
         <p>{{ selectedCharacter.gender }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.age || '', characterToGuess.age || '')">
-        <p>{{ selectedCharacter.age }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliation || '', characterToGuess.affiliation || '')">
-        <p>{{ selectedCharacter.affiliation }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliations || '', characterToGuess.affiliations || '')">
+        <p>{{ selectedCharacter.affiliations }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
         <p>{{ selectedCharacter.race }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.evolutive_forms || '', characterToGuess.evolutive_forms || '')">
-        <p>{{ selectedCharacter.evolutive_forms }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.attributes || '', characterToGuess.attributes || '')">
+        <p>{{ selectedCharacter.attributes }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.rank || '', characterToGuess.rank || '')">
-        <p>{{ selectedCharacter.rank }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.hierarchy || '', characterToGuess.hierarchy || '')">
+        <p>{{ selectedCharacter.hierarchy }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
         <p>{{ selectedCharacter.introduction_arc }}</p>
