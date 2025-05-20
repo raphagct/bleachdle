@@ -1,6 +1,11 @@
 <div class="top-side">
   <h1>BLEACHDLE</h1>
   <p>Devinez le personnage du jour !</p>
+  <app-indice-card
+    [characterImg] = characterToGuess.image
+    [characterAge]= characterToGuess.age
+    [tries]= tries>
+  </app-indice-card>
 </div>
 
 <div class="container">
@@ -39,7 +44,12 @@
         <p>{{ selectedCharacter.hierarchy }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
-        <p>{{ selectedCharacter.introduction_arc }}</p>
+        <p>
+          {{ selectedCharacter.introduction_arc }}
+          <span>
+      {{ getArcIndication(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '') }}
+          </span>
+        </p>
       </td>
     </tr>
   </table>
