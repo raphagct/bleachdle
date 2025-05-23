@@ -2,6 +2,9 @@ package raph.dev.backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -21,5 +24,9 @@ public class Character {
     private String hierarchy;
     private String introduction_arc;
     private String image;
+
+    @OneToMany(mappedBy = "personnage", cascade = CascadeType.ALL, orphanRemoval = true)
+    @EqualsAndHashCode.Exclude
+    private List<Bankai> bankais;
 
 }

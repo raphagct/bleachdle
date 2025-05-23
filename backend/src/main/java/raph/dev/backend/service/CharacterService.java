@@ -26,4 +26,8 @@ public class CharacterService {
     public Optional<Character> getCharacterById(Long id) {
         return characterRepository.findById(id);
     }
+
+    public List<Character> getCharactersWithBankai() {
+        return characterRepository.findCharactersWithBankai();
+    }
 }

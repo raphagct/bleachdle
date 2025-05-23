@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Character} from '../../model/character';
-import {CharacterService} from '../../service/character.service';
+import {Character} from '../../../model/character';
+import {CharacterService} from '../../../service/character.service';
 import {FormsModule} from '@angular/forms';
-import {SearchBarComponent} from '../../core/components/search-bar/search-bar.component';
+import {SearchBarComponent} from '../../../shared/search-bar/search-bar.component';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';
-import {IndiceCardComponent} from '../../core/components/indice-card/indice-card.component';
+import {IndiceCardComponent} from '../indice-card-classic/indice-card.component';
 
 @Component({
   selector: 'app-classic-mode',

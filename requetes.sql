@@ -89,3 +89,9 @@ INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, 
     ('Soul King', 'Inconnu', 'Inconnu', 'Divinité', 'Palais Royal', 'Aucune', 'Roi des âmes', 'Guerre sanglante', 'assets/img/soulking');
 
 
+CREATE TABLE bankai (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    personnage_id INT NOT NULL REFERENCES personnages(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
