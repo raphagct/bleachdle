@@ -2,6 +2,7 @@
   <h1>BLEACHDLE</h1>
   <p>Devinez le personnage du jour !</p>
   <app-indice-card
+    *ngIf="characterToGuess"
     [characterImg] = characterToGuess.image
     [characterAge]= characterToGuess.age
     [tries]= tries>
@@ -15,7 +16,7 @@
   </app-search-bar>
 
 <div *ngIf="!isFind; else finded">
-  <table *ngIf="selectedCharacters.length > 0 ">
+  <table *ngIf="selectedCharacters > 0 ">
     <tr>
       <th *ngFor="let attribute of attributesFormatted">
         {{ attribute }}
