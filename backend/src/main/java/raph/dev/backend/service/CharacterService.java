@@ -15,10 +15,6 @@ public class CharacterService {
     @Autowired
     private CharacterRepository characterRepository;
 
-    public CharacterService(CharacterRepository characterRepository) {
-        this.characterRepository = characterRepository;
-    }
-
     public List<Character> getAllCharacters() {
         return characterRepository.findAll();
     }

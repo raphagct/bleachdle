@@ -14,7 +14,8 @@ public class Bankai {
 
     private String nom;
     private String type;
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @ManyToOne
     @JoinColumn(name = "personnage_id", nullable = false)
     private Character personnage;
 

@@ -12,7 +12,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api/characters")
+@RequestMapping("/api")
 public class CharacterController {
 
     @Autowired

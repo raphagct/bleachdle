@@ -25,8 +25,4 @@ public class Character {
     private String introduction_arc;
     private String image;
 
-    @OneToMany(mappedBy = "personnage", cascade = CascadeType.ALL, orphanRemoval = true)
-    @EqualsAndHashCode.Exclude
-    private List<Bankai> bankais;
-
 }

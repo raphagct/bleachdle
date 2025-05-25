@@ -11,7 +11,7 @@ import {Bankai} from '../model/bankai';
 })
 export class CharacterService {
   private http = inject(HttpClient);
-  private apiUrl = '/api/characters';
+  private apiUrl = '/api';
 
   getAllCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>(`${this.apiUrl}/all`);
