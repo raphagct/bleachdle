@@ -1,0 +1,44 @@
+td {
+  padding: 1rem;
+  vertical-align: top;
+  border: 1px solid;
+}
+
+#image {
+  padding: 0;
+  margin: 0;
+
+}
+.top-side {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  h1 {
+    font-size: 4em;
+  }
+  margin-bottom: 5%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  app-search-bar {
+    margin: 2%;
+  }
+}
+
+.match {
+  background-color: green;
+}
+
+.partial {
+  background-color: darkorange;
+}
+
+.miss {
+  background-color: red;
+}
+
+

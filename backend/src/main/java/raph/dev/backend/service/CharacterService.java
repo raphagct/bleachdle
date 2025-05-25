@@ -15,15 +15,15 @@ public class CharacterService {
     @Autowired
     private CharacterRepository characterRepository;
 
-    public CharacterService(CharacterRepository characterRepository) {
-        this.characterRepository = characterRepository;
-    }
-
     public List<Character> getAllCharacters() {
         return characterRepository.findAll();
     }
 
     public Optional<Character> getCharacterById(Long id) {
         return characterRepository.findById(id);
+    }
+
+    public List<Character> getCharactersWithBankai() {
+        return characterRepository.findCharactersWithBankai();
     }
 }

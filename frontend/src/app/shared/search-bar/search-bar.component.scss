@@ -1,0 +1,26 @@
+.character-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  height: 45px;
+}
+
+.character-item img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5%;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.character-item div {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.character-item:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+<p-floatlabel>
+  <p-autoComplete
+    [(ngModel)]="value"
+    [suggestions]="filteredCharacters"
+    (completeMethod)="filterCharacters($event)"
+    (onSelect)="characterSelected($event)"
+    optionLabel="name"
+    [inputStyle]="{'height':'60px','width':'400px'}"
+>
+
+    <ng-template let-character pTemplate="item">
+      <div  class="character-item">
+        <img [src]="character.image + '.jpg'" [alt]="character.id" />
+        <div >{{ character.name }}</div>
+      </div>
+    </ng-template>
+
+  </p-autoComplete>
+  <label>Tape le nom d'un personnage</label>
+</p-floatlabel>
+
+

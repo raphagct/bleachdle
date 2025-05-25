@@ -1,0 +1,29 @@
+<button (click)="showAge()" [disabled]="!isAgeAvailable">
+  <p-panel>
+    <ng-container *ngIf="hasClickedAge; else ageIndice">
+      <p>Age du personnage : {{ characterAge }}</p>
+    </ng-container>
+    <ng-template #ageIndice>
+      <p class="m-0">
+        {{ remainingAgeTries === 0 ? 'Indice de l\'âge disponible' : 'Indice de l\'âge dans ' + remainingAgeTries + ' essais' }}
+      </p>
+    </ng-template>
+  </p-panel>
+</button>
+
+<button (click)="showPortrait()" [disabled]="!isPortraitAvailable">
+  <p-panel>
+    <ng-container *ngIf="hasClickedPortrait; else portraitIndice">
+      <img
+        [src]="characterImg + '.jpg'"
+        alt="pas de portrait"
+        class="portrait"
+        [style.filter]="'blur(' + blurLevel + 'px)'" />
+    </ng-container>
+    <ng-template #portraitIndice>
+      <p class="m-0">
+        {{ remainingPortraitTries === 0 ? 'Indice de portrait disponible' : 'Indice de portrait flouté dans ' + remainingPortraitTries + ' essais' }}
+      </p>
+    </ng-template>
+  </p-panel>
+</button>
