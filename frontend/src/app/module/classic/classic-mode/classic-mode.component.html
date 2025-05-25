@@ -16,7 +16,7 @@
   </app-search-bar>
 
 <div *ngIf="!isFind; else finded">
-  <table *ngIf="selectedCharacters > 0 ">
+  <table *ngIf="selectedCharacters.length > 0 ">
     <tr>
       <th *ngFor="let attribute of attributesFormatted">
         {{ attribute }}

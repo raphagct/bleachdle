@@ -1,11 +1,31 @@
 <div class="top-side">
   <h1>BLEACHDLE</h1>
   <p>Devinez le nom du Bankai/Shikai du jour !</p>
+  <p-panel>
+    {{ bankaiToGuess.nom}}
+  </p-panel>
+
 </div>
 
 <div class="container">
   <app-search-bar
     [concernedCharacters]="characters"
-  >
+    (chosenCharacter)="onCharacterSelected($event)">
   </app-search-bar>
+
+  <div *ngIf="!isFind; else finded">
+    <table *ngIf="selectedCharacters.length > 0 ">
+      <tr *ngFor="let selectedCharacter of selectedCharacters">
+        <td [ngClass]="getAttributeStatus(selectedCharacter)">
+          {{ selectedCharacter.name}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <ng-template #finded>
+    Bravo, vous avez trouvé l'utilisateur du bankai/shikai du jour: {{ bankaiToGuess.personnage.name}} !
+    <a routerLink="/bankai">BANKAI</a>
+  </ng-template>
+
 </div>

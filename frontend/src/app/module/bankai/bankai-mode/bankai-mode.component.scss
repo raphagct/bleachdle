@@ -8,3 +8,26 @@
   }
   margin-bottom: 7%;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  app-search-bar {
+    margin: 2%;
+  }
+}
+
+td {
+  padding: 1rem;
+  vertical-align: top;
+  border: 1px solid;
+}
+
+.match {
+  background-color: green;
+}
+
+.miss {
+  background-color: red;
+}
