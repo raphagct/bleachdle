@@ -51,7 +51,6 @@ INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, 
     ('Rangiku Matsumoto', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (10ème division)', 'Shikai', 'Lieutenant', 'Arc de la Soul Society', 'assets/img/rangiku'),
     ('Izuru Kira', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (3ème division)', 'Shikai', 'Lieutenant', 'Arc de la Soul Society', 'assets/img/izuru');
 
--- Ajout des personnages supplémentaires
 INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc, image) VALUES
     ('Sōsuke Aizen', 'Homme', 'Inconnu', 'Shinigami, Hollow', 'Ancien capitaine du Gotei 13 (5ème division), Hueco Mundo', 'Fusion Hōgyoku', 'Ancien Capitaine', 'Arc de la Soul Society', 'assets/img/aizen'),
     ('Genryūsai Shigekuni Yamamoto', 'Homme', '2100+', 'Shinigami', 'Gotei 13 (1ère division)', 'Bankai', 'Capitaine-commandant', 'Arc de la Soul Society', 'assets/img/yamamoto'),
@@ -95,3 +94,155 @@ CREATE TABLE bankai (
     type VARCHAR(255) NOT NULL,
     personnage_id INT NOT NULL REFERENCES personnages(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO bankai (nom, type, personnage_id) VALUES
+    ('Tensa Zangetsu', 'Vitesse / Compression de Reiatsu', (SELECT id FROM personnages WHERE name = 'Ichigo Kurosaki')),
+    ('Hakka no Togame', 'Glace / Zéro Absolu', (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki')),
+    ('Sōō Zabimaru', 'Physique / Os de Babouin', (SELECT id FROM personnages WHERE name = 'Renji Abarai')),
+    ('Shirafude Ichimonji', 'Encre / Réécriture de nom', (SELECT id FROM personnages WHERE name = 'Ichibei Hyōsube')),
+    ('Shatatsu Karagara Shigarami no Tsuji', 'Tissage / Manipulation de la réalité', (SELECT id FROM personnages WHERE name = 'Senjumaru Shutara')),
+    ('Zanka no Tachi', 'Feu / Chaleur solaire (15 millions degrés)', (SELECT id FROM personnages WHERE name = 'Genryūsai Shigekuni Yamamoto')),
+    ('Senbonzakura Kageyoshi', 'Lames multiples / Zone', (SELECT id FROM personnages WHERE name = 'Byakuya Kuchiki')),
+    ('Katen Kyōkotsu: Karamatsu Shinjū', 'Matérialisation de jeux / Réalité', (SELECT id FROM personnages WHERE name = 'Shunsui Kyoraku')),
+    ('Daiguren Hyōrinmaru', 'Glace / Gel des 4 éléments', (SELECT id FROM personnages WHERE name = 'Toshiro Hitsugaya')),
+    ('Konjiki Ashisogi Jizō: Matai Fukuin Shōtai', 'Biologique / Adaptation constante', (SELECT id FROM personnages WHERE name = 'Mayuri Kurotsuchi')),
+    ('Sakashima Yokoshima Happōfusagari', 'Inversion / Manipulation mentale de zone', (SELECT id FROM personnages WHERE name = 'Shinji Hirako')),
+    ('Jakuhō Raikōben', 'Missile / Explosif', (SELECT id FROM personnages WHERE name = 'Soi Fon')),
+    ('Minazuki', 'Acide / Sang', (SELECT id FROM personnages WHERE name = 'Retsu Unohana')),
+    ('Kokujō Tengen Myō''ō: Dangai Jōe', 'Armure géante / Lien vital sans armure', (SELECT id FROM personnages WHERE name = 'Sajin Komamura')),
+    ('Kinshara Butōdan', 'Son / Illusion physique', (SELECT id FROM personnages WHERE name = 'Rōjūrō Ōtoribashi (Rose)')),
+    ('Tekken Tachikaze', 'Vent / Impact explosif continu', (SELECT id FROM personnages WHERE name = 'Kensei Muguruma')),
+    ('Kamishini no Yari', 'Extension rapide / Poison cellulaire', (SELECT id FROM personnages WHERE name = 'Gin Ichimaru')),
+    ('Suzumushi Tsuishiki: Enma Kōrogi', 'Privation sensorielle', (SELECT id FROM personnages WHERE name = 'Kaname Tōsen')),
+    ('Kannonbiraki Benihime Aratame', 'Restructuration de la matière', (SELECT id FROM personnages WHERE name = 'Kisuke Urahara')),
+    ('Ryūmon Hōzukimaru', 'Physique / Puissance progressive', (SELECT id FROM personnages WHERE name = 'Ikkaku Madarame'));
+
+INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc, image) VALUES
+    ('Chōjirō Sasakibe', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (1ère division)', 'Bankai', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/chojiro');
+
+INSERT INTO bankai (nom, type, personnage_id) VALUES
+    ('Kōkō Gonryō Rikyū', 'Foudre / Contrôle météo', (SELECT id FROM personnages WHERE name = 'Chōjirō Sasakibe'));
+
+-- Création de la table citations
+CREATE TABLE citations (
+    id SERIAL PRIMARY KEY,
+    contenu TEXT NOT NULL,
+    personnage_id INT NOT NULL REFERENCES personnages(id) ON DELETE CASCADE
+);
+
+-- Insertion des citations
+INSERT INTO citations (contenu, personnage_id) VALUES
+    ('Je ne me bats pas parce que je veux gagner. Je me bats parce que je dois gagner !',
+    (SELECT id FROM personnages WHERE name = 'Ichigo Kurosaki')),
+    ('Personne n''a jamais commencé au sommet du monde. Ni toi, ni moi, ni même Dieu. Mais ce vide insupportable sur le trône du ciel est révolu. Désormais, je me tiendrai au-dessus des cieux.',
+    (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
+    ('La perfection n''existe pas. Ce monde est imparfait. C''est pour ça qu''il est beau.',
+    (SELECT id FROM personnages WHERE name = 'Mayuri Kurotsuchi')),
+    ('Si je pouvais vivre cinq vies, je serais née dans cinq villes différentes, j''aurais mangé cinq plats différents, j''aurais eu cinq métiers différents... et je serais tombée amoureuse de la même personne, cinq fois.',
+    (SELECT id FROM personnages WHERE name = 'Orihime Inoue')),
+    ('L''arrogance consiste à croire que l''on est capable de me vaincre.',
+    (SELECT id FROM personnages WHERE name = 'Byakuya Kuchiki')),
+    ('Si je t''ouvre la poitrine, verrais-je ton cœur ? Si je t''ouvre le crâne, verrais-je tes espoirs ? C''est donc cela... un coeur.',
+    (SELECT id FROM personnages WHERE name = 'Ulquiorra Cifer')),
+    ('La mort et la douleur ne sont qu''un prix dérisoire à payer pour le plaisir du combat !',
+    (SELECT id FROM personnages WHERE name = 'Kenpachi Zaraki')),
+    ('Si tu te transformais en serpent demain et que tu commençais à dévorer des humains, et qu''avec cette même bouche tu me disais "Je t''aime", serais-je encore capable de dire "Je t''aime" en retour ?',
+    (SELECT id FROM personnages WHERE name = 'Gin Ichimaru')),
+    ('À partir du moment où l''on entre en guerre, les deux camps sont en tort.',
+    (SELECT id FROM personnages WHERE name = 'Shunsui Kyoraku')),
+
+    -- 12. Kaien Shiba (Le coeur / transmission)
+    ('Le cœur n''est pas à l''intérieur de nous. Il se crée quand nous pensons aux autres.',
+    (SELECT id FROM personnages WHERE name = 'Kaien Shiba')),
+
+    -- 13. Kisuke Urahara (Le futur)
+    ('Il n''y a rien de plus ennuyeux qu''un combat dont l''issue est déjà décidée.',
+    (SELECT id FROM personnages WHERE name = 'Kisuke Urahara')),
+
+    -- 14. Rukia Kuchiki (La pluie/Espoir)
+    ('Les gens ont de l''espoir parce que la mort est invisible.',
+    (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki')),
+
+    -- 15. Genryūsai Shigekuni Yamamoto (La force)
+    ('Pourquoi penses-tu que je suis le capitaine-commandant du Gotei 13 depuis mille ans ? C''est parce qu''aucun Shinigami plus fort que moi n''est né durant tout ce temps.',
+    (SELECT id FROM personnages WHERE name = 'Genryūsai Shigekuni Yamamoto')),
+
+    -- 16. Grimmjow Jaegerjaquez (Roi)
+    ('Peu importe qui ils sont. Ceux qui nous regardent de haut, je les écraserai tous jusqu''au dernier.',
+    (SELECT id FROM personnages WHERE name = 'Grimmjow Jaegerjaquez')),
+
+    -- 17. Toshiro Hitsugaya
+    ('Nous ne brandissons pas nos épées par fierté, mais pour protéger ce qui nous est cher.',
+    (SELECT id FROM personnages WHERE name = 'Toshiro Hitsugaya')),
+
+    -- 18. Renji Abarai (Vers le ciel)
+    ('Même si je n''arrive pas à l''atteindre... mes crocs, eux, l''atteindront !',
+    (SELECT id FROM personnages WHERE name = 'Renji Abarai')),
+
+    -- 19. Kaname Tōsen (La justice)
+    ('Ceux qui ne craignent pas leur propre épée ne méritent pas de la brandir.',
+    (SELECT id FROM personnages WHERE name = 'Kaname Tōsen')),
+
+    -- 20. Yhwach (La paix)
+    ('La paix n''est rien d''autre qu''une illusion créée par les faibles pour se protéger.',
+    (SELECT id FROM personnages WHERE name = 'Yhwach'));
+
+INSERT INTO citations (contenu, personnage_id) VALUES
+    -- === SŌSUKE AIZEN (Le Maître de la manipulation) ===
+    -- Sur la compréhension
+    ('L''admiration est le sentiment le plus éloigné de la compréhension.',
+    (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
+
+    -- Sur la vérité/le mensonge (Ce que tu demandais)
+    ('Pourquoi penses-tu que je mens ? Est-ce que j''ai l''air de mentir ? Ou est-ce que tu as peur que je dise la vérité ?',
+    (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
+
+    -- Sur le contrôle de la vie d'Ichigo (La paume de la main)
+    ('Tu pensais vraiment que ta rencontre avec Rukia Kuchiki était un hasard ? Tout ce qui t''est arrivé, chacun de tes combats, c''est moi qui les ai planifiés depuis le début.',
+    (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
+
+    -- Sur la confiance
+    ('Faire confiance à quelqu''un, c''est se remettre entièrement à lui. C''est l''acte le plus lâche qui soit.',
+    (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
+
+    -- === KANAME TŌSEN (La Justice aveugle) ===
+    -- Sa vision radicale de la justice
+    ('Si la justice ne suffit pas à vaincre le mal, alors je deviendrai un mal capable de vaincre le mal. C''est cela, ma justice.',
+    (SELECT id FROM personnages WHERE name = 'Kaname Tōsen')),
+
+    -- Sur la peur
+    ('Ceux qui ne connaissent pas la peur ne sont pas aptes à combattre.',
+    (SELECT id FROM personnages WHERE name = 'Kaname Tōsen')),
+
+    -- === RUKIA KUCHIKI (Poésie et Mélancolie) ===
+    -- Sur la pluie (Emblématique - lien avec Ichigo)
+    ('Je me souviens... Quand je t''ai rencontré pour la première fois, la pluie qui tombait dans mon cœur s''est arrêtée.',
+    (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki')),
+
+    -- Poème du Tome 1 (La peur de l'invisible)
+    ('Nous craignons ce que nous ne pouvons voir... Et nous respectons ce que nous ne pouvons voir.',
+    (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki')),
+
+    -- Sur le lien
+    ('Les liens qui nous unissent ne disparaîtront jamais, même si nos corps sont séparés.',
+    (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki')),
+
+    -- === GIN ICHIMARU (Le Serpent) ===
+    -- La description effrayante de lui-même
+    ('Je suis un serpent. J''ai la peau froide, je n''ai pas de cœur. Je me glisse partout en cherchant une proie, et quand je la trouve... je l''avale d''un coup.',
+    (SELECT id FROM personnages WHERE name = 'Gin Ichimaru')),
+
+    -- === BYAKUYA KUCHIKI (L'Honneur et la Loi) ===
+    -- Sur l'écart de puissance
+    ('La différence de niveau entre toi et moi est aussi grande que celle qui sépare la terre du ciel.',
+    (SELECT id FROM personnages WHERE name = 'Byakuya Kuchiki')),
+
+    -- === ICHIGO KUROSAKI (Le Protecteur) ===
+    -- Sur le pouvoir (à Zangetsu)
+    ('Je ne demande pas "Pourquoi ?"... Je demande juste la force de protéger tout le monde !',
+    (SELECT id FROM personnages WHERE name = 'Ichigo Kurosaki')),
+
+    -- === ULQUIORRA CIFER (Le Nihilisme) ===
+    -- Sur le vide
+    ('Ce qui se reflète dans mes yeux n''a aucun sens. Ce qui ne s''y reflète pas n''existe pas.',
+    (SELECT id FROM personnages WHERE name = 'Ulquiorra Cifer'));

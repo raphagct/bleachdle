@@ -24,8 +24,8 @@ export class BankaiModeComponent implements OnInit{
   characters: Character[] = [];
   bankaiToGuess!: Bankai;
   selectedCharacters: Character[] = [];
-  isFind : boolean = false;
-  tries : number = 0;
+  isFind: boolean = false;
+  tries: number = 0;
 
   constructor(private characterService: CharacterService) {}
 
