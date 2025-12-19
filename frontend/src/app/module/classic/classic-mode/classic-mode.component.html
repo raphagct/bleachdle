@@ -32,17 +32,17 @@
       <td [ngClass]="getAttributeStatus(selectedCharacter.gender || '', characterToGuess.gender || '')">
         <p>{{ selectedCharacter.gender }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliations || '', characterToGuess.affiliations || '')">
-        <p>{{ selectedCharacter.affiliations }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliation || '', characterToGuess.affiliation || '')">
+        <p>{{ selectedCharacter.affiliation }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
         <p>{{ selectedCharacter.race }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.attributes || '', characterToGuess.attributes || '')">
-        <p>{{ selectedCharacter.attributes }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.evolutive_forms || '', characterToGuess.evolutive_forms || '')">
+        <p>{{ selectedCharacter.evolutive_forms }}</p>
       </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.hierarchy || '', characterToGuess.hierarchy || '')">
-        <p>{{ selectedCharacter.hierarchy }}</p>
+      <td [ngClass]="getAttributeStatus(selectedCharacter.rank || '', characterToGuess.rank || '')">
+        <p>{{ selectedCharacter.rank }}</p>
       </td>
       <td [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
         <p>
@@ -62,5 +62,3 @@
   </ng-template>
 
 </div>
-
-

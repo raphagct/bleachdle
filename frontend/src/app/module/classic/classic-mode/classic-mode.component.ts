@@ -32,10 +32,10 @@ export class ClassicModeComponent implements OnInit {
   arcs = [
     { nom: "Prélude", ordre: 1 },
     { nom: "Arc de la Soul Society", ordre: 2 },
-    { nom: "Arc de l’Invasion des Arrancars", ordre: 3 },
-    { nom: "Arc de l''Assaut du Hueco Mundo", ordre: 4 },
-    { nom: "Arc des Fullbringers", ordre: 5 },
-    { nom: "Arc de la Guerre sanglante Millénaire ", ordre: 6 },
+    { nom: "Arc de l' Invasion des Arrancars", ordre: 3 },
+    { nom: "Arc de l'Assaut du Hueco Mundo", ordre: 4 },
+    { nom: "Arc Fullbringer", ordre: 5 },
+    { nom: "Arc de la Guerre sanglante Millénaire", ordre: 6 },
   ];
 
   constructor(private characterService: CharacterService) {}

@@ -2,18 +2,17 @@ package raph.dev.backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 @Data
 @Entity
-@Table(name = "citations")
-public class Citations {
+@Table(name = "techniques")
+public class Technique {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String citation;
-    private String destinataire;
-    private String arc;
+    private String nom;
+    private String gif_url;
 
     @ManyToOne
     @JoinColumn(name = "personnage_id", nullable = false)
