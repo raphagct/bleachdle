@@ -51,9 +51,9 @@ INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, 
     ('Uryū Ishida', 'Homme', '17', 'Quincy', 'Wandenreich', 'Vollständig', 'Sternritter "A"', 'Prélude', 'assets/img/uryu'),
     ('Jūshirō Ukitake', 'Homme', '200', 'Shinigami', 'Gotei 13 (13ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/jushiro'),
     ('Mayuri Kurotsuchi', 'Homme', '200', 'Shinigami', 'Gotei 13 (12ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/mayuri'),
-    ('Shinji Hirako', 'Homme', 'Unknown', 'Shinigami, Visored', 'Gotei 13 (5ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de l'' Invasion des Arrancars', 'assets/img/shinji'),
-    ('Love Aikawa', 'Homme', 'Unknown', 'Shinigami, Visored', 'Visored', 'Shikai', 'Ancien Capitaine', 'Arc de l'' Invasion des Arrancars', 'assets/img/love'),
-    ('Hiyori Sarugaki', 'Femme', 'Unknown', 'Shinigami, Visored', 'Visored', 'Shikai', 'Ancienne Vice-capitaine', 'Arc de l'' Invasion des Arrancars', 'assets/img/hyori'),
+    ('Shinji Hirako', 'Homme', 'Unknown', 'Shinigami, Vizard', 'Gotei 13 (5ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de l''Invasion des Arrancars', 'assets/img/shinji'),
+    ('Love Aikawa', 'Homme', 'Unknown', 'Shinigami, Vizard', 'Vizard', 'Shikai', 'Ancien Capitaine', 'Arc de l''Invasion des Arrancars', 'assets/img/love'),
+    ('Hiyori Sarugaki', 'Femme', 'Unknown', 'Shinigami, Vizard', 'Vizard', 'Shikai', 'Ancienne Vice-capitaine', 'Arc de l''Invasion des Arrancars', 'assets/img/hyori'),
     ('Bazz-B', 'Homme', 'Unknown', 'Quincy', 'Wandenreich', 'Vollständig', 'Sternritter "H"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/bazzb'),
     ('Askin Nakk Le Vaar', 'Homme', 'Unknown', 'Quincy', 'Wandenreich', 'Vollständig', 'Sternritter "D"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/askin'),
     ('Yukio Hans Vorarlberna', 'Homme', '17', 'Humain, Fullbringer', 'Xcution', 'Fullbring', 'Membre', 'Arc Fullbringer', 'assets/img/yukio'),
@@ -70,44 +70,44 @@ INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, 
     ('Ōetsu Nimaiya', 'Homme', 'Inconnu', 'Shinigami', 'Division 0', 'Inconnu', 'Membre Division 0', 'Arc de la Guerre sanglante Millénaire', 'assets/img/oetsu'),
     ('Tenjirō Kirinji', 'Homme', 'Inconnu', 'Shinigami', 'Division 0', 'Inconnu', 'Membre Division 0', 'Arc de la Guerre sanglante Millénaire', 'assets/img/tenjiro'),
     ('Kirio Hikifune', 'Femme', 'Inconnu', 'Shinigami', 'Division 0', 'Inconnu', 'Membre Division 0', 'Arc de la Guerre sanglante Millénaire', 'assets/img/kirio'),
-    ('Soi Fon', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (2ème division)', 'Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/soifon'),
-    ('Ikkaku Madarame', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (11ème division)', 'Bankai', '3ème siège', 'Arc de la Soul Society', 'assets/img/ikkaku'),
+    ('Soi Fon', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (2ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/soifon'),
+    ('Ikkaku Madarame', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (11ème division)', 'Shikai, Bankai', '3ème siège', 'Arc de la Soul Society', 'assets/img/ikkaku'),
     ('Yumichika Ayasegawa', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (11ème division)', 'Shikai caché', '5ème siège', 'Arc de la Soul Society', 'assets/img/yumichika'),
     ('Rangiku Matsumoto', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (10ème division)', 'Shikai', 'Lieutenant', 'Arc de la Soul Society', 'assets/img/rangiku'),
     ('Izuru Kira', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (3ème division)', 'Shikai', 'Lieutenant', 'Arc de la Soul Society', 'assets/img/kira');
 
 INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc, image) VALUES
     ('Sōsuke Aizen', 'Homme', 'Inconnu', 'Shinigami, Hollow', 'Ancien capitaine du Gotei 13 (5ème division), Arc de l''Assaut du Hueco Mundo', 'Fusion Hōgyoku', 'Ancien Capitaine', 'Arc de la Soul Society', 'assets/img/aizen'),
-    ('Genryūsai Shigekuni Yamamoto', 'Homme', '2100+', 'Shinigami', 'Gotei 13 (1ère division)', 'Bankai', 'Capitaine-commandant', 'Arc de la Soul Society', 'assets/img/yamamoto'),
+    ('Genryūsai Shigekuni Yamamoto', 'Homme', '2100+', 'Shinigami', 'Gotei 13 (1ère division)', 'Shikai, Bankai', 'Capitaine-commandant', 'Arc de la Soul Society', 'assets/img/yamamoto'),
     ('Kūgo Ginjō', 'Homme', 'Inconnu', 'Humain, Fullbringer, Shinigami', 'Xcution', 'Fullbring', 'Leader', 'Arc Fullbringer', 'assets/img/ginjo'),
     ('Shūkurō Tsukishima', 'Homme', 'Inconnu', 'Humain, Fullbringer', 'Xcution', 'Fullbring', 'Membre', 'Arc Fullbringer', 'assets/img/tsukishima'),
     ('Baraggan Louisenbairn', 'Homme', 'Inconnu', 'Arrancar', 'Arc de l''Assaut du Hueco Mundo (Espada #2)', 'Resurrección', 'Espada #2', 'Arc de l''Assaut du Hueco Mundo', 'assets/img/barragan'),
     ('Kaname Tōsen', 'Homme', 'Inconnu', 'Shinigami, Hollow', 'Ancien Gotei 13 (9ème division)', 'Resurrección', 'Ancien Capitaine', 'Arc de la Soul Society', 'assets/img/tosen'),
-    ('Gin Ichimaru', 'Homme', 'Inconnu', 'Shinigami', 'Ancien Gotei 13 (3ème division)', 'Bankai', 'Ancien Capitaine', 'Arc de la Soul Society', 'assets/img/gin'),
-    ('Kensei Muguruma', 'Homme', 'Inconnu', 'Shinigami, Visored', 'Gotei 13 (9ème division)', 'Bankai', 'Capitaine', 'Arc de l'' Invasion des Arrancars', 'assets/img/kensei'),
-    ('Kenpachi Zaraki', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (11ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/zaraki'),
-    ('Retsu Unohana', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (4ème division)', 'Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/unohana'),
-    ('Zangetsu', 'Homme', 'Inconnu', 'Manifestation spirituelle', 'Aucun', 'Shikai, Bankai', 'Esprit d''Ichigo', 'Prélude', 'assets/img/zangetsu'),
+    ('Gin Ichimaru', 'Homme', 'Inconnu', 'Shinigami', 'Ancien Gotei 13 (3ème division)', 'Shikai, Bankai', 'Ancien Capitaine', 'Arc de la Soul Society', 'assets/img/gin'),
+    ('Kensei Muguruma', 'Homme', 'Inconnu', 'Shinigami, Vizard', 'Gotei 13 (9ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de l''Invasion des Arrancars', 'assets/img/kensei'),
+    ('Kenpachi Zaraki', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (11ème division)', 'Shikai, Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/zaraki'),
+    ('Retsu Unohana', 'Femme', 'Inconnu', 'Shinigami', 'Gotei 13 (4ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de la Soul Society', 'assets/img/unohana'),
+    ('Zangetsu', 'Homme', 'Inconnu', 'Manifestation spirituelle', 'Aucun', 'Shikai, Shikai, Bankai', 'Aucun', 'Prélude', 'assets/img/zangetsu'),
     ('Yhwach', 'Homme', '1000+', 'Quincy', 'Wandenreich', 'The Almighty', 'Empereur', 'Arc de la Guerre sanglante Millénaire', 'assets/img/yhwach'),
     ('Yammy Llargo', 'Homme', 'Inconnu', 'Arrancar', 'Arc de l''Assaut du Hueco Mundo (Espada #0)', 'Resurrección', 'Espada #0', 'Arc de l''Assaut du Hueco Mundo', 'assets/img/yammy'),
     ('Szayelaporro Granz', 'Homme', 'Inconnu', 'Arrancar', 'Arc de l''Assaut du Hueco Mundo (Espada #8)', 'Resurrección', 'Espada #8', 'Arc de l''Assaut du Hueco Mundo', 'assets/img/szayelaporro'),
     ('Shūhei Hisagi', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (9ème division)', 'Shikai', 'Lieutenant', 'Arc de la Soul Society', 'assets/img/shuhei'),
-    ('Ryūken Ishida', 'Homme', 'Inconnu', 'Quincy', 'Hopital d''Ishida', 'Aucune', 'Père d''Uryū', 'Prélude', 'assets/img/ryuken'),
-    ('Rōjūrō Ōtoribashi (Rose)', 'Homme', 'Inconnu', 'Shinigami, Visored', 'Gotei 13 (3ème division)', 'Bankai', 'Capitaine', 'Arc de l'' Invasion des Arrancars', 'assets/img/rose'),
+    ('Ryūken Ishida', 'Homme', 'Inconnu', 'Quincy', 'Hopital d''Ishida', 'Aucune', 'Aucun', 'Prélude', 'assets/img/ryuken'),
+    ('Rōjūrō Ōtoribashi (Rose)', 'Homme', 'Inconnu', 'Shinigami, Vizard', 'Gotei 13 (3ème division)', 'Shikai, Bankai', 'Capitaine', 'Arc de l''Invasion des Arrancars', 'assets/img/rose'),
     ('Riruka Dokugamine', 'Femme', 'Inconnu', 'Humaine, Fullbringer', 'Xcution', 'Fullbring', 'Membre', 'Arc Fullbringer', 'assets/img/riruka'),
     ('Pernida Parnkgjas', 'Inconnu', 'Inconnu', 'Quincy, Main du roi des esprits', 'Wandenreich', 'Évolution biologique', 'Sternritter "C"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/pernida'),
     ('Nelliel Tu Odelschwanck', 'Femme', 'Inconnu', 'Arrancar', 'Arc de l''Assaut du Hueco Mundo (ancienne Espada #3)', 'Resurrección', 'Ancienne Espada', 'Arc de l''Assaut du Hueco Mundo', 'assets/img/nelliel'),
-    ('Masaki Kurosaki', 'Femme', 'Décédée', 'Quincy', 'Famille Kurosaki', 'Aucune', 'Mère d''Ichigo', 'Prélude', 'assets/img/masaki'),
+    ('Masaki Kurosaki', 'Femme', 'Décédée', 'Quincy', 'Famille Kurosaki', 'Aucune', 'Aucun', 'Prélude', 'assets/img/masaki'),
     ('Lille Barro', 'Homme', 'Inconnu', 'Quincy', 'Wandenreich', 'The X-Axis', 'Sternritter "X"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/lille'),
     ('Gerard Valkyrie', 'Homme', 'Inconnu', 'Quincy', 'Wandenreich', 'The Miracle', 'Sternritter "M"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/gerard'),
-    ('Nemu Kurotsuchi', 'Femme', 'Inconnu', 'Mod Soul', 'Gotei 13 (12ème division)', 'Renforcement biologique', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/nemu'),
+    ('Nemu Kurotsuchi', 'Femme', 'Inconnu', 'Mod Soul', 'Gotei 13 (12ème division)', 'Aucune', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/nemu'),
     ('Kaien Shiba', 'Homme', 'Décédé', 'Shinigami', 'Gotei 13 (13ème division)', 'Shikai', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/kaien'),
-    ('Sajin Komamura', 'Homme', 'Inconnu', 'Shinigami (homme-loup)', 'Gotei 13 (7ème division)', 'Bankai, Transformation humaine', 'Capitaine', 'Arc de la Soul Society', 'assets/img/komamura'),
-    ('Isshin Kurosaki', 'Homme', 'Inconnu', 'Shinigami', 'Famille Kurosaki, ancien Gotei 13 (10ème division)', 'Bankai', 'Ancien Capitaine', 'Prélude', 'assets/img/isshin'),
-    ('Kūkaku Shiba', 'Femme', 'Inconnu', 'Humaine', 'Famille Shiba', 'Aucune', 'Chef de clan', 'Arc de la Soul Society', 'assets/img/kukaku'),
-    ('Jugram Haschwalth', 'Homme', 'Inconnu', 'Quincy', 'Wandenreich', 'The Balance', 'Sternritter "B", Bras droit de Yhwach', 'Arc de la Guerre sanglante Millénaire', 'assets/img/jugram'),
+    ('Sajin Komamura', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (7ème division)', 'Shikai, Bankai, Transformation humaine', 'Capitaine', 'Arc de la Soul Society', 'assets/img/komamura'),
+    ('Isshin Kurosaki', 'Homme', 'Inconnu', 'Shinigami', 'Famille Kurosaki, ancien Gotei 13 (10ème division)', 'Shikai, Bankai', 'Ancien Capitaine', 'Prélude', 'assets/img/isshin'),
+    ('Kūkaku Shiba', 'Femme', 'Inconnu', 'Humaine', 'Famille Shiba', 'Aucune', 'Aucun', 'Arc de la Soul Society', 'assets/img/kukaku'),
+    ('Jugram Haschwalth', 'Homme', 'Inconnu', 'Quincy', 'Wandenreich', 'The Balance', 'Sternritter "B"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/jugram'),
     ('Bambietta Basterbine', 'Femme', 'Inconnu', 'Quincy', 'Wandenreich', 'The Explode', 'Sternritter "E"', 'Arc de la Guerre sanglante Millénaire', 'assets/img/bambietta'),
-    ('Ganju Shiba', 'Homme', 'Inconnu', 'Humain', 'Famille Shiba', 'Aucune', 'Combattant', 'Arc de la Soul Society', 'assets/img/ganju');
+    ('Ganju Shiba', 'Homme', 'Inconnu', 'Humain', 'Famille Shiba', 'Aucune', 'Aucun', 'Arc de la Soul Society', 'assets/img/ganju');
 
 INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc, image) VALUES
     ('Soul King', 'Inconnu', 'Inconnu', 'Divinité', 'Palais Royal', 'Aucune', 'Roi des âmes', 'Arc de la Guerre sanglante Millénaire', 'assets/img/soulking');
@@ -138,7 +138,7 @@ INSERT INTO bankai (nom, type, personnage_id) VALUES
     ('Ryūmon Hōzukimaru', 'Physique / Puissance progressive', (SELECT id FROM personnages WHERE name = 'Ikkaku Madarame'));
 
 INSERT INTO personnages (name, gender, age, race, affiliation, evolutive_forms, rank, introduction_arc, image) VALUES
-    ('Chōjirō Sasakibe', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (1ère division)', 'Bankai', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/chojiro');
+    ('Chōjirō Sasakibe', 'Homme', 'Inconnu', 'Shinigami', 'Gotei 13 (1ère division)', 'Shikai, Bankai', 'Vice-capitaine', 'Arc de la Soul Society', 'assets/img/chojiro');
 
 INSERT INTO bankai (nom, type, personnage_id) VALUES
     ('Kōkō Gonryō Rikyū', 'Foudre / Contrôle météo', (SELECT id FROM personnages WHERE name = 'Chōjirō Sasakibe'));

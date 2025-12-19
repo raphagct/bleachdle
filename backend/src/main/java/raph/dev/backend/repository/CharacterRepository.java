@@ -17,6 +17,7 @@ public interface CharacterRepository extends JpaRepository<Character,Long> {
     @Override
     List<Character> findAll();
 
-    @Query("SELECT DISTINCT b.personnage FROM Bankai b WHERE b.type IN ('bankai', 'shikai')")
+    @Query("SELECT b.personnage FROM Bankai b")
     List<Character> findCharactersWithBankai();
+
 }
