@@ -1,6 +1,8 @@
-export interface citation {
+import {Character} from './character';
+
+export interface Citation {
   id: number;
   contenu: string;
   destinataire: string;
-  personnageId: number;
+  personnage: Character;
 }

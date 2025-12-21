@@ -14,5 +14,7 @@ public interface BankaiRepository extends JpaRepository<Bankai,Long> {
     @Override
     List<Bankai> findAll();
 
+    @Query("SELECT b.personnage FROM Bankai b")
+    List<Character> findCharactersWithBankai();
 
 }

@@ -2,7 +2,7 @@
   <h1>BLEACHDLE</h1>
   <p>Devinez le nom du Bankai/Shikai du jour !</p>
   <p-panel>
-    {{ bankaiToGuess.nom}}
+    {{ bankaiToGuess?.nom}}
   </p-panel>
 
 </div>
@@ -25,7 +25,7 @@
 
   <ng-template #finded>
     Bravo, vous avez trouvé l'utilisateur du bankai/shikai du jour: {{ bankaiToGuess.personnage.name}} !
-    <a routerLink="/bankai">BANKAI</a>
+    <a routerLink="/quotes">CITATIONS</a>
   </ng-template>
 
 </div>

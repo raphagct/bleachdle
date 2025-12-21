@@ -196,17 +196,17 @@ INSERT INTO citations (contenu, destinataire, personnage_id) VALUES
 
 INSERT INTO techniques (nom, gif_url, personnage_id) VALUES
     -- Ichigo
-    ('Getsuga Tenshō', 'assets/gifs/getsuga_tensho.gif',
+    ('Getsuga Tenshō', 'assets/gif/getsuga_tensho',
     (SELECT id FROM personnages WHERE name = 'Ichigo Kurosaki')),
 
     -- Byakuya
-    ('Senbonzakura Kageyoshi', 'assets/gifs/senbonzakura.gif',
+    ('Senbonzakura Kageyoshi', 'assets/gif/senbonzakura',
     (SELECT id FROM personnages WHERE name = 'Byakuya Kuchiki')),
 
     -- Aizen (Hadō #90)
-    ('Hadō #90 : Kurohitsugi', 'assets/gifs/kurohitsugi.gif',
+    ('Hadō #90 : Kurohitsugi', 'assets/gif/kurohitsugi',
     (SELECT id FROM personnages WHERE name = 'Sōsuke Aizen')),
 
     -- Rukia
-    ('Tsugi no Mai, Hakuren', 'assets/gifs/hakuren.gif',
+    ('Tsugi no Mai, Hakuren', 'assets/gif/hakuren',
     (SELECT id FROM personnages WHERE name = 'Rukia Kuchiki'));

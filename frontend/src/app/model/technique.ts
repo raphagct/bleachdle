@@ -1,6 +1,8 @@
-export interface technique {
+import {Character} from './character';
+
+export interface Technique {
   id: number;
   nom: string;
-  gifUrl: string;
-  personnageId: number;
+  gif_url: string;
+  personnage: Character;
 }
