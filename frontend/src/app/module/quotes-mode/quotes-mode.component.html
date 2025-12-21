@@ -1,0 +1,31 @@
+<div class="top-side">
+  <h1>BLEACHDLE</h1>
+  <p>Devinez la citation du jour !</p>
+  <p-panel>
+    {{ quoteToGuess?.contenu}}
+  </p-panel>
+
+</div>
+
+<div class="container">
+  <app-search-bar
+    [concernedCharacters]="characters"
+    (chosenCharacter)="onCharacterSelected($event)">
+  </app-search-bar>
+
+  <div *ngIf="!isFind; else finded">
+    <table *ngIf="selectedCharacters.length > 0 ">
+      <tr *ngFor="let selectedCharacter of selectedCharacters">
+        <td [ngClass]="getAttributeStatus(selectedCharacter)">
+          {{ selectedCharacter.name}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <ng-template #finded>
+    Bravo, vous avez trouvé le personnage de la citation du jour: {{ quoteToGuess.personnage.name}} !
+    <a routerLink="/techniques">TECHNIQUES</a>
+  </ng-template>
+
+</div>
