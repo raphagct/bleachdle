@@ -1,3 +1,15 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+p-floatlabel {
+  display: block;
+  /* or flex */
+  text-align: center;
+}
+
 .character-item {
   display: flex;
   align-items: center;

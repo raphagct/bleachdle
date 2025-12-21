@@ -1,38 +1,40 @@
-<div class="top-side">
-  <h1>BLEACHDLE</h1>
-  <p>Devinez la citations du jour !</p>
-  <p-panel>
-    <div *ngIf="techniqueToGuess.gif_url">
-      <img
-        [src]="techniqueToGuess.gif_url + '.gif'"
-        [alt]="techniqueToGuess.nom">
+<div class="glass-container game-wrapper">
+  <div class="top-side">
+    <h1>TECHNIQUES</h1>
+    <p>Quelle est cette technique ?</p>
+    <div class="clue-box glass-container">
+      <div *ngIf="techniqueToGuess?.gif_url; else loading">
+        <img [src]="techniqueToGuess.gif_url + '.gif'" [alt]="techniqueToGuess.nom" class="technique-gif">
+      </div>
+      <ng-template #loading>
+        <p>Chargement de la technique...</p>
+      </ng-template>
     </div>
-
-    <div *ngIf="!techniqueToGuess">
-      Chargement de la technique...
-    </div>
-  </p-panel>
-
-</div>
-
-<div class="container">
-  <app-search-bar
-    [concernedCharacters]="characters"
-    (chosenCharacter)="onCharacterSelected($event)">
-  </app-search-bar>
-
-  <div *ngIf="!isFind; else finded">
-    <table *ngIf="selectedCharacters.length > 0 ">
-      <tr *ngFor="let selectedCharacter of selectedCharacters">
-        <td [ngClass]="getAttributeStatus(selectedCharacter)">
-          {{ selectedCharacter.name}}
-        </td>
-      </tr>
-    </table>
   </div>
 
-  <ng-template #finded>
-    Bravo, vous avez trouvé le personnage de la technique du jour: {{ techniqueToGuess.personnage.name}} !
-  </ng-template>
+  <div class="content-container">
+    <app-search-bar [concernedCharacters]="characters" (chosenCharacter)="onCharacterSelected($event)">
+    </app-search-bar>
 
+    <div *ngIf="!isFind; else finded" class="results-area">
+      <table *ngIf="selectedCharacters.length > 0 " class="results-table">
+        <tbody>
+          <tr *ngFor="let selectedCharacter of selectedCharacters">
+            <td [ngClass]="getAttributeStatus(selectedCharacter)" class="result-cell">
+              {{ selectedCharacter.name}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #finded>
+      <div class="success-message">
+        <h2>Bravo !</h2>
+        <p>Cette technique appartient à : <strong>{{ techniqueToGuess.personnage.name}}</strong></p>
+        <a routerLink="/" class="btn-glass">Retour à l'accueil &rarr;</a>
+      </div>
+    </ng-template>
+
+  </div>
 </div>

@@ -1,38 +1,80 @@
-.mode-wrapper {
+.landing-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  padding: 0 5%;
-  justify-content: space-between; // Pour espacer le menu et l'image
+  justify-content: center;
+  min-height: 100vh;
+  /* Takes full viewport heigh */
+  padding: 2rem;
+  text-align: center;
 }
 
-.container-mode {
-  ul {
-    list-style: none;
+.logo-area {
+  margin-bottom: 3rem;
 
-    li {
-      padding: 10%;
-      font-size: 3em;
-      transition: transform 0.3s ease;
-    }
+  h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
 
-    li:hover {
-      cursor: pointer;
-      transform: translateY(-10px);
-    }
+  p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  min-height: 120px;
+  transition: all 0.4s ease;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+  }
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+    h2 {
+      /* Removed hover color change */
     }
   }
 }
 
-.image-container {
-  flex-shrink: 0;
-  img {
-    max-height: 90vh;
-    height: auto;
-    width: auto;
+/* Responsiveness */
+@media (max-width: 768px) {
+  .logo-area h1 {
+    font-size: 3rem;
+  }
+
+  .game-card {
+    min-height: 100px;
   }
 }

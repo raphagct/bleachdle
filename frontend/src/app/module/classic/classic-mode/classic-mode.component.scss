@@ -1,44 +1,123 @@
-td {
-  padding: 1rem;
-  vertical-align: top;
-  border: 1px solid;
-}
-
-#image {
-  padding: 0;
-  margin: 0;
-
-}
-.top-side {
+.game-wrapper {
+  max-width: 1400px;
+  margin: 2rem auto;
   display: flex;
-  align-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-  h1 {
-    font-size: 4em;
-  }
-  margin-bottom: 5%;
-}
-
-.container {
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  app-search-bar {
-    margin: 2%;
+  align-items: center;
+}
+
+.top-side {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
+.content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+app-search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.results-area {
+  width: 100%;
+  overflow-x: auto;
+  /* Handle wide tables */
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+
+  th {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  td {
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+
+    p {
+      margin: 0;
+    }
+
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.image-cell {
+  padding: 0 !important;
+  width: 80px;
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+/* Status Colors (using global vars) */
 .match {
-  background-color: green;
+  background-color: var(--status-match) !important;
+  box-shadow: 0 0 10px var(--status-match);
 }
 
 .partial {
-  background-color: darkorange;
+  background-color: var(--status-partial) !important;
+  box-shadow: 0 0 10px var(--status-partial);
 }
 
 .miss {
-  background-color: red;
+  background-color: var(--status-miss) !important;
+  box-shadow: 0 0 10px var(--status-miss);
+  /* Red shadow */
 }
 
+.success-message {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(46, 204, 113, 0.2);
+  border-radius: 16px;
+  border: 1px solid var(--status-match);
 
+  h2 {
+    font-size: 2.5rem;
+    color: var(--status-match);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}

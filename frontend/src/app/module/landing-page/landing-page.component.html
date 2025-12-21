@@ -1,15 +1,32 @@
-<div class="mode-wrapper">
-  <div class="container-mode">
-    <ul>
-      <li><a routerLink="classic">CLASSIQUE</a></li>
-      <li><a routerLink="bankai">BANKAI</a></li>
-      <li><a routerLink="quotes">CITATIONS</a></li>
-      <li><a routerLink="techniques">TECHNIQUES</a></li>
-    </ul>
-  </div>
-  <div class="image-container">
-    <img ngSrc="assets/img/byakuya_landing.png" alt="byakuya" height="1104" width="736" priority/>
+<div class="landing-wrapper">
+
+  <div class="logo-area">
+    <h1>BLEACHDLE</h1>
+    <p>Test your knowledge of the Spirit World</p>
   </div>
 
-  <p-button label="Toggle Dark Mode" (onClick)="toggleDarkMode()"/>
+  <div class="cards-container">
+
+    <a routerLink="/classic" class="game-card glass-container">
+      <h2>CLASSIQUE</h2>
+      <p>Devinez le personnage du jour avec des indices.</p>
+    </a>
+
+    <a routerLink="/bankai" class="game-card glass-container">
+      <h2>BANKAI</h2>
+      <p>Testez vos connaissances sur les Zanpakutōs.</p>
+    </a>
+
+    <a routerLink="/quotes" class="game-card glass-container">
+      <h2>CITATIONS</h2>
+      <p>Qui a dit quoi ? Retrouvez l'auteur.</p>
+    </a>
+
+    <a routerLink="/techniques" class="game-card glass-container">
+      <h2>TECHNIQUES</h2>
+      <p>Reconnaissez les techniques de combat.</p>
+    </a>
+
+  </div>
+
 </div>

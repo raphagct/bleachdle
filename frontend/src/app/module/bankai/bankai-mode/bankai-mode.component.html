@@ -1,31 +1,35 @@
-<div class="top-side">
-  <h1>BLEACHDLE</h1>
-  <p>Devinez le nom du Bankai/Shikai du jour !</p>
-  <p-panel>
-    {{ bankaiToGuess?.nom}}
-  </p-panel>
-
-</div>
-
-<div class="container">
-  <app-search-bar
-    [concernedCharacters]="characters"
-    (chosenCharacter)="onCharacterSelected($event)">
-  </app-search-bar>
-
-  <div *ngIf="!isFind; else finded">
-    <table *ngIf="selectedCharacters.length > 0 ">
-      <tr *ngFor="let selectedCharacter of selectedCharacters">
-        <td [ngClass]="getAttributeStatus(selectedCharacter)">
-          {{ selectedCharacter.name}}
-        </td>
-      </tr>
-    </table>
+<div class="glass-container game-wrapper">
+  <div class="top-side">
+    <h1>BANKAI</h1>
+    <p>Devinez le personnage grâce à son Bankai/Shikai !</p>
+    <div class="clue-box glass-container">
+      <h2>{{ bankaiToGuess?.nom}}</h2>
+    </div>
   </div>
 
-  <ng-template #finded>
-    Bravo, vous avez trouvé l'utilisateur du bankai/shikai du jour: {{ bankaiToGuess.personnage.name}} !
-    <a routerLink="/quotes">CITATIONS</a>
-  </ng-template>
+  <div class="content-container">
+    <app-search-bar [concernedCharacters]="characters" (chosenCharacter)="onCharacterSelected($event)">
+    </app-search-bar>
 
+    <div *ngIf="!isFind; else finded" class="results-area">
+      <table *ngIf="selectedCharacters.length > 0 " class="results-table">
+        <tbody>
+          <tr *ngFor="let selectedCharacter of selectedCharacters">
+            <td [ngClass]="getAttributeStatus(selectedCharacter)" class="result-cell">
+              {{ selectedCharacter.name}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #finded>
+      <div class="success-message">
+        <h2>Bravo !</h2>
+        <p>Le propriétaire de ce Bankai/Shikai est : <strong>{{ bankaiToGuess.personnage.name}}</strong></p>
+        <a routerLink="/quotes" class="btn-glass">Mode CITATIONS &rarr;</a>
+      </div>
+    </ng-template>
+
+  </div>
 </div>
