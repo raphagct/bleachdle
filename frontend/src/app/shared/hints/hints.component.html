@@ -1,0 +1,42 @@
+<div class="hints-container">
+    <!-- Hint 1 -->
+    <div class="hint-card">
+        <div class="hint-content" *ngIf="tries >= hint1UnlockTries; else lockedHint1">
+            <h3 class="hint-title">{{ hint1Title }}</h3>
+            <div class="hint-body">
+                <ng-container [ngSwitch]="hint1Type">
+                    <p *ngSwitchCase="'text'" class="hint-text">{{ hint1Value }}</p>
+                    <img *ngSwitchCase="'image'" [src]="hint1Value" class="hint-img" alt="Hint 1">
+                </ng-container>
+            </div>
+        </div>
+        <ng-template #lockedHint1>
+            <div class="locked-content">
+                <i class="pi pi-lock lock-icon"></i>
+                <p>Indice de {{ hint1Title }}</p>
+                <p class="unlock-info">dans {{ hint1UnlockTries - tries }} essaie(s)</p>
+            </div>
+        </ng-template>
+    </div>
+
+    <!-- Hint 2 -->
+    <div class="hint-card">
+        <div class="hint-content" *ngIf="tries >= hint2UnlockTries; else lockedHint2">
+            <h3 class="hint-title">{{ hint2Title }}</h3>
+            <div class="hint-body">
+                <ng-container [ngSwitch]="hint2Type">
+                    <p *ngSwitchCase="'text'" class="hint-text">{{ hint2Value }}</p>
+                    <img *ngSwitchCase="'image'" [src]="hint2Value" [class.blurred]="hint2Blur" class="hint-img"
+                        alt="Hint 2">
+                </ng-container>
+            </div>
+        </div>
+        <ng-template #lockedHint2>
+            <div class="locked-content">
+                <i class="pi pi-lock lock-icon"></i>
+                <p>Indice de {{ hint2Title }}</p>
+                <p class="unlock-info">dans {{ hint2UnlockTries - tries }} essaie(s)</p>
+            </div>
+        </ng-template>
+    </div>
+</div>

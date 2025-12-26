@@ -5,6 +5,10 @@
     <div class="clue-box glass-container">
       <h2>{{ bankaiToGuess?.nom}}</h2>
     </div>
+    <app-hints *ngIf="bankaiToGuess" [tries]="tries" hint1Title="Affiliation"
+      [hint1Value]="bankaiToGuess.personnage.affiliation" [hint1UnlockTries]="5" hint2Title="Indice 2" hint2Value="???"
+      [hint2UnlockTries]="15">
+    </app-hints>
   </div>
 
   <div class="content-container">

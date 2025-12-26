@@ -2,9 +2,10 @@
   <div class="top-side">
     <h1>CLASSIQUE</h1>
     <p>Devinez le personnage du jour !</p>
-    <app-indice-card *ngIf="characterToGuess" [characterImg]=characterToGuess.image [characterAge]=characterToGuess.age
-      [tries]=tries>
-    </app-indice-card>
+    <app-hints *ngIf="characterToGuess" [tries]="tries" hint1Title="Age" [hint1Value]="characterToGuess.age"
+      [hint1UnlockTries]="5" hint2Title="Portrait" [hint2Value]="characterToGuess.image + '.jpg'" hint2Type="image"
+      [hint2Blur]="true" [hint2UnlockTries]="10">
+    </app-hints>
   </div>
 
   <div class="content-container">
