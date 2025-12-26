@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
-import {Panel} from 'primeng/panel';
 import {RouterLink} from '@angular/router';
 import {SearchBarComponent} from '../../shared/search-bar/search-bar.component';
 import {Character} from '../../model/character';
-import {Citation} from '../../model/citation';
 import {CharacterService} from '../../service/character.service';
 import {Technique} from '../../model/technique';
 
@@ -13,7 +11,6 @@ import {Technique} from '../../model/technique';
   imports: [
     NgForOf,
     NgIf,
-    Panel,
     RouterLink,
     SearchBarComponent,
     NgClass

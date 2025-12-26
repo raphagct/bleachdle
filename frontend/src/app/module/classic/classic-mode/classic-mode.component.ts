@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { SearchBarComponent } from '../../../shared/search-bar/search-bar.component';
 import { NgClass, NgForOf, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { IndiceCardComponent } from '../indice-card-classic/indice-card.component';
 import { HintsComponent } from '../../../shared/hints/hints.component';
 
 @Component({
@@ -17,7 +16,6 @@ import { HintsComponent } from '../../../shared/hints/hints.component';
     NgForOf,
     NgClass,
     RouterLink,
-    IndiceCardComponent,
     HintsComponent
   ],
   templateUrl: './classic-mode.component.html',

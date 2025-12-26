@@ -5,7 +5,6 @@ import { SearchBarComponent } from '../../../shared/search-bar/search-bar.compon
 import { Bankai } from '../../../model/bankai';
 import { NgClass, NgForOf, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Panel } from 'primeng/panel';
 import { HintsComponent } from '../../../shared/hints/hints.component';
 
 @Component({
@@ -15,7 +14,6 @@ import { HintsComponent } from '../../../shared/hints/hints.component';
     NgForOf,
     NgIf,
     RouterLink,
-    Panel,
     NgClass,
     HintsComponent
   ],

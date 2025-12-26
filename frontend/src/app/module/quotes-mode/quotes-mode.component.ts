@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass, NgForOf, NgIf } from "@angular/common";
-import { Panel } from "primeng/panel";
 import { RouterLink } from "@angular/router";
 import { SearchBarComponent } from "../../shared/search-bar/search-bar.component";
 import { Character } from '../../model/character';
@@ -13,7 +12,6 @@ import { HintsComponent } from '../../shared/hints/hints.component';
   imports: [
     NgForOf,
     NgIf,
-    Panel,
     RouterLink,
     SearchBarComponent,
     NgClass,

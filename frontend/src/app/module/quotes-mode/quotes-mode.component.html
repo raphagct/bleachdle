@@ -3,7 +3,7 @@
     <h1>CITATIONS</h1>
     <p>Qui a dit cette phrase ?</p>
     <div class="clue-box glass-container">
-      <h2>"{{ quoteToGuess?.contenu}}"</h2>
+      <h2>"{{ quoteToGuess.contenu}}"</h2>
     </div>
     <app-hints *ngIf="quoteToGuess" [tries]="tries" hint1Title="Destinataire" [hint1Value]="quoteToGuess.destinataire"
       [hint1UnlockTries]="5" hint2Title="Indice 2" hint2Value="???" [hint2UnlockTries]="15">

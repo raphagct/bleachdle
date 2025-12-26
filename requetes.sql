@@ -13,7 +13,8 @@ CREATE TABLE personnages (
     evolutive_forms VARCHAR(200),
     rank VARCHAR(200),
     introduction_arc VARCHAR(100),
-    image VARCHAR(200)
+    image VARCHAR(200),
+    indice_vitale VARCHAR(200)
     );
 
 CREATE TABLE bankai (

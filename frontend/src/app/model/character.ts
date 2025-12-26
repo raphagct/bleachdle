@@ -9,4 +9,5 @@ export interface Character {
   rank: string;
   introduction_arc: string;
   image: string;
+  indice_vitale: string;
 }
