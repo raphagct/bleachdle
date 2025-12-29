@@ -3,7 +3,6 @@
 ## **Description**
 
 **Bleachdle** est une application web inspirée du célèbre jeu **Wordle**, adaptée à l'univers de l'anime/manga **Bleach**. Ce projet est développé en **Angular** pour le front-end et **Spring Boot** et **Spring Data JPA** pour le back-end, avec une base de données **PostgreSQL**.  
-Le projet est en cours de développement et vise à offrir une expérience ludique et immersive aux fans de Bleach.
 
 ---
 
@@ -29,13 +28,7 @@ Le projet est en cours de développement et vise à offrir une expérience ludiq
 - **Back-end** : Spring Boot, Spring Data JPA
 - **Base de données** : PostgreSQL
 
----
 
-## **État actuel du projet**
-
-- **Progression** : Le projet est en cours de développement.
-  - Le mode classique est fonctionelle
----
 
 ## **Auteur**
 
