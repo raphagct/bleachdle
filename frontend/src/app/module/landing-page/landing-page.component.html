@@ -1,15 +1,28 @@
-<div class="mode-wrapper">
-  <div class="container-mode">
-    <ul>
-      <li><a routerLink="classic">CLASSIQUE</a></li>
-      <li><a routerLink="bankai">BANKAI</a></li>
-      <li><a routerLink="quotes">CITATIONS</a></li>
-      <li><a routerLink="techniques">TECHNIQUES</a></li>
-    </ul>
-  </div>
-  <div class="image-container">
-    <img ngSrc="assets/img/byakuya_landing.png" alt="byakuya" height="1104" width="736" priority/>
+<div class="landing-wrapper">
+
+  <div class="header-container">
+    <h1>BLEACHDLE</h1>
+    <p>DEVINE LES PERSONNAGES DE BLEACH</p>
   </div>
 
-  <p-button label="Toggle Dark Mode" (onClick)="toggleDarkMode()"/>
+  <div class="cards-container">
+
+    <a routerLink="/classic">
+      <img src="./assets/img/classic-mode-img.png">
+    </a>
+
+    <a routerLink="/bankai" >
+      <img src="./assets/img/bankai-mode-img.png">
+    </a>
+
+    <a routerLink="/quotes" >
+      <img src="./assets/img/citation-mode-img.png">
+    </a>
+
+    <a routerLink="/techniques">
+      <img src="./assets/img/technique-mode-img.png">
+    </a>
+
+  </div>
+
 </div>

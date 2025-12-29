@@ -1,66 +1,72 @@
-<div class="top-side">
-  <h1>BLEACHDLE</h1>
-  <p>Devinez le personnage du jour !</p>
-  <app-indice-card
-    *ngIf="characterToGuess"
-    [characterImg] = characterToGuess.image
-    [characterAge]= characterToGuess.age
-    [tries]= tries>
-  </app-indice-card>
+<div class="glass-container game-wrapper">
+  <div class="top-side">
+    <h1>CLASSIQUE</h1>
+    <p>Devinez le personnage du jour !</p>
+    <app-hints *ngIf="characterToGuess" [tries]="tries" hint1Title="Age" [hint1Value]="characterToGuess.age"
+      [hint1UnlockTries]="5" hint2Title="Portrait" [hint2Value]="characterToGuess.image + '.jpg'" hint2Type="image"
+      [hint2Blur]="true" [hint2UnlockTries]="10">
+    </app-hints>
+  </div>
+
+  <div class="content-container">
+    <app-search-bar [concernedCharacters]="characters" (chosenCharacter)="onCharacterSelected($event)">
+    </app-search-bar>
+
+    <div *ngIf="!isFind; else finded" class="results-area">
+      <table *ngIf="selectedCharacters.length > 0 " class="results-table">
+        <thead>
+          <tr>
+            <th *ngFor="let attribute of attributesFormatted">
+              {{ attribute }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let selectedCharacter of selectedCharacters">
+            <td class="image-cell">
+              <img [src]="selectedCharacter.image + '.jpg'" [alt]=selectedCharacter.id>
+            </td>
+            <td [ngClass]="getAttributeStatus(selectedCharacter.name || '', characterToGuess.name || '')">
+              <p>{{ selectedCharacter.name }}</p>
+            </td>
+            <td [ngClass]="getAttributeStatus(selectedCharacter.gender || '', characterToGuess.gender || '')">
+              <p>{{ selectedCharacter.gender }}</p>
+            </td>
+            <td [ngClass]="getAttributeStatus(selectedCharacter.affiliation || '', characterToGuess.affiliation || '')">
+              <p>{{ selectedCharacter.affiliation }}</p>
+            </td>
+            <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
+              <p>{{ selectedCharacter.race }}</p>
+            </td>
+            <td
+              [ngClass]="getAttributeStatus(selectedCharacter.evolutive_forms || '', characterToGuess.evolutive_forms || '')">
+              <p>{{ selectedCharacter.evolutive_forms }}</p>
+            </td>
+            <td [ngClass]="getAttributeStatus(selectedCharacter.rank || '', characterToGuess.rank || '')">
+              <p>{{ selectedCharacter.rank }}</p>
+            </td>
+            <td
+              [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
+              <p>
+                {{ selectedCharacter.introduction_arc }}
+                <span>
+                  {{ getArcIndication(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')
+                  }}
+                </span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #finded>
+      <div class="success-message">
+        <h2>Bravo !</h2>
+        <p>Vous avez trouvé le personnage du jour : <strong>{{ characterToGuess.name}}</strong></p>
+        <a routerLink="/bankai" class="btn-glass">Mode BANKAI &rarr;</a>
+      </div>
+    </ng-template>
+
+  </div>
 </div>
-
-<div class="container">
-  <app-search-bar
-    [concernedCharacters]="characters"
-    (chosenCharacter)="onCharacterSelected($event)">
-  </app-search-bar>
-
-<div *ngIf="!isFind; else finded">
-  <table *ngIf="selectedCharacters.length > 0 ">
-    <tr>
-      <th *ngFor="let attribute of attributesFormatted">
-        {{ attribute }}
-        </th>
-    </tr>
-    <tr *ngFor="let selectedCharacter of selectedCharacters">
-      <td id="image">
-        <img [src]="selectedCharacter.image + '.jpg'"  [alt]=selectedCharacter.id height="80px" width="80px">
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.name || '', characterToGuess.name || '')">
-        <p>{{ selectedCharacter.name }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.gender || '', characterToGuess.gender || '')">
-        <p>{{ selectedCharacter.gender }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.affiliations || '', characterToGuess.affiliations || '')">
-        <p>{{ selectedCharacter.affiliations }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
-        <p>{{ selectedCharacter.race }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.attributes || '', characterToGuess.attributes || '')">
-        <p>{{ selectedCharacter.attributes }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.hierarchy || '', characterToGuess.hierarchy || '')">
-        <p>{{ selectedCharacter.hierarchy }}</p>
-      </td>
-      <td [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">
-        <p>
-          {{ selectedCharacter.introduction_arc }}
-          <span>
-      {{ getArcIndication(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '') }}
-          </span>
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-  <ng-template #finded>
-    Bravo, vous avez trouvé le personnage du jour qui était : {{ characterToGuess.name}} !
-    <a routerLink="/bankai">BANKAI</a>
-  </ng-template>
-
-</div>
-
-

@@ -1,38 +1,76 @@
-.mode-wrapper {
+.landing-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding: 0 5%;
-  justify-content: space-between; // Pour espacer le menu et l'image
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
 }
 
-.container-mode {
-  ul {
-    list-style: none;
+.header-container {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
 
-    li {
-      padding: 10%;
-      font-size: 3em;
-      transition: transform 0.3s ease;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+}
+
+.cards-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  width: 100%;
+  min-height: 0;
+
+  a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: transparent;
+    padding: 0;
+    border: none;
+    flex-shrink: 1;
+
+    img {
+      width: auto;
+      max-width: 100%;
+      max-height: 18vh;
+      display: block;
+      object-fit: contain;
     }
 
-    li:hover {
-      cursor: pointer;
-      transform: translateY(-10px);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+    &:hover {
+      transform: scale(1.05);
+      z-index: 10; /* Passe devant les autres au survol */
     }
   }
 }
 
-.image-container {
-  flex-shrink: 0;
-  img {
-    max-height: 90vh;
-    height: auto;
-    width: auto;
+@media (max-width: 768px) {
+  .logo-area h1 {
+    font-size: 2.5rem;
+  }
+
+  .cards-container a img {
+    max-height: 15vh;
   }
 }

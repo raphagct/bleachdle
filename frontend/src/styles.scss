@@ -1,7 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  /* Slightly darker for better contrast */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --accent-color: #ff9f43;
+  /* Example accent color */
+  --status-match: #2ecc71;
+  --status-partial: #e67e22;
+  --status-miss: #e74c3c;
+}
+
 * {
   box-sizing: border-box;
-  padding : 0;
-  margin : 0;
-  font-family: Inter , "sans-serif";
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utility Class */
+.glass-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 2rem;
+  color: var(--text-primary);
+}
+
+/* Button Styles */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }

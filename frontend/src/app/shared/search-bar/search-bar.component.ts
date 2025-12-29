@@ -29,7 +29,7 @@ export class SearchBarComponent  {
     const query = event.query.toLowerCase();
     this.filteredCharacters = this.concernedCharacters
       .filter(character =>
-      character.name.toLowerCase().includes(query)
+        this.removeAccents(character.name).startsWith(query)
       )
       .filter(character =>
         !this.selectedCharacters.includes(character)
@@ -41,5 +41,12 @@ export class SearchBarComponent  {
     this.chosenCharacter.emit(selected);
     this.selectedCharacters.push(selected);
     this.value = '';
+  }
+
+  removeAccents(str: string): string {
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   }
 }

@@ -4,9 +4,10 @@ export interface Character {
   gender: string;
   age: string;
   race: string;
-  affiliations: string;
-  attributes: string;
-  hierarchy: string;
+  affiliation: string;
+  evolutive_forms: string;
+  rank: string;
   introduction_arc: string;
   image: string;
+  indice_vitale: string;
 }
