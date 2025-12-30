@@ -1,0 +1,69 @@
+[ {
+  "id" : 1,
+  "nom" : "Getsuga Tenshō",
+  "gif_url" : "assets/gif/getsuga_tensho",
+  "personnage" : {
+    "id" : 1,
+    "name" : "Ichigo Kurosaki",
+    "gender" : "Homme",
+    "age" : "17",
+    "race" : "Humain, Shinigami, Hollow, Fullbringer, Quincy",
+    "affiliation" : "Ville de Karakura",
+    "evolutive_forms" : "Shikai, Bankai, Fullbring",
+    "rank" : "Lycéen, Shinigami remplaçant",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/ichigo",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 2,
+  "nom" : "Senbonzakura Kageyoshi",
+  "gif_url" : "assets/gif/senbonzakura",
+  "personnage" : {
+    "id" : 4,
+    "name" : "Byakuya Kuchiki",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (6ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/byakuya",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 3,
+  "nom" : "Hadō #90 : Kurohitsugi",
+  "gif_url" : "assets/gif/kurohitsugi",
+  "personnage" : {
+    "id" : 37,
+    "name" : "Sōsuke Aizen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien capitaine du Gotei 13 (5ème division), Arc de l'Assaut du Hueco Mundo",
+    "evolutive_forms" : "Fusion Hōgyoku",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/aizen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 4,
+  "nom" : "Tsugi no Mai, Hakuren",
+  "gif_url" : "assets/gif/hakuren",
+  "personnage" : {
+    "id" : 2,
+    "name" : "Rukia Kuchiki",
+    "gender" : "Femme",
+    "age" : "150",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (13ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Vice-capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/rukia",
+    "indice_vitale" : null
+  }
+} ]

@@ -33,7 +33,12 @@
               <p>{{ selectedCharacter.gender }}</p>
             </td>
             <td [ngClass]="getAttributeStatus(selectedCharacter.affiliation || '', characterToGuess.affiliation || '')">
-              <p>{{ selectedCharacter.affiliation }}</p>
+              <p>
+                {{ selectedCharacter.affiliation }}
+                <span>
+                  {{ getNumericIndication(selectedCharacter.affiliation || '', characterToGuess.affiliation || '') }}
+                </span>
+              </p>
             </td>
             <td [ngClass]="getAttributeStatus(selectedCharacter.race || '', characterToGuess.race || '')">
               <p>{{ selectedCharacter.race }}</p>
@@ -43,7 +48,12 @@
               <p>{{ selectedCharacter.evolutive_forms }}</p>
             </td>
             <td [ngClass]="getAttributeStatus(selectedCharacter.rank || '', characterToGuess.rank || '')">
-              <p>{{ selectedCharacter.rank }}</p>
+              <p>
+                {{ selectedCharacter.rank }}
+                <span>
+                  {{ getNumericIndication(selectedCharacter.rank || '', characterToGuess.rank || '') }}
+                </span>
+              </p>
             </td>
             <td
               [ngClass]="getAttributeStatus(selectedCharacter.introduction_arc || '', characterToGuess.introduction_arc || '')">

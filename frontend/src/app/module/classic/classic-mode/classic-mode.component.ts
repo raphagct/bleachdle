@@ -91,4 +91,28 @@ export class ClassicModeComponent implements OnInit {
 
 
 
+  getNumericIndication(chosen: string, target: string): string {
+    // Patterns to look for: "Espada #X", "Xème siège", "Xème division"
+    const patterns = [
+      /Espada #(\d+)/,
+      /(\d+)(?:ème|ère) division/
+    ];
+
+    for (const pattern of patterns) {
+      const chosenMatch = chosen.match(pattern);
+      const targetMatch = target.match(pattern);
+
+      if (chosenMatch && targetMatch) {
+        const chosenNum = parseInt(chosenMatch[1], 10);
+        const targetNum = parseInt(targetMatch[1], 10);
+
+        if (chosenNum > targetNum) {
+          return '↑'; // Target is "Higher" (Lower number) e.g. Guess 6, Target 2
+        } else if (chosenNum < targetNum) {
+          return '↓'; // Target is "Lower" (Higher number)
+        }
+      }
+    }
+    return '';
+  }
 }

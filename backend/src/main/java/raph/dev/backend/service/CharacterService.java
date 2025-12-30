@@ -2,49 +2,49 @@ package raph.dev.backend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import raph.dev.backend.model.Bankai;
 import raph.dev.backend.model.Character;
 import raph.dev.backend.model.Citation;
-import raph.dev.backend.repository.BankaiRepository;
-import raph.dev.backend.repository.CitationRepository;
-import raph.dev.backend.repository.ClassicRepository;
-import raph.dev.backend.repository.TechniqueRepository;
+import raph.dev.backend.model.Technique;
 
 import java.util.List;
 import java.util.Optional;
-
+import java.util.stream.Collectors;
 
 @Service
 public class CharacterService {
 
     @Autowired
-    private ClassicRepository classicRepository;
-    @Autowired
-    private BankaiRepository bankaiRepository;
-
-    @Autowired
-    private CitationRepository citationRepository;
-
-    @Autowired
-    private TechniqueRepository techniqueRepository;
+    private JsonDataLoader dataLoader;
 
     public List<Character> getAllCharacters() {
-        return classicRepository.findAll();
+        return dataLoader.getCharacters();
     }
 
     public Optional<Character> getCharacterById(Long id) {
-        return classicRepository.findById(id);
+        return dataLoader.getCharacters().stream()
+                .filter(c -> c.getId().equals(id))
+                .findFirst();
     }
 
     public List<Character> getCharactersWithBankai() {
-        return bankaiRepository.findCharactersWithBankai();
+        return dataLoader.getBankais().stream()
+                .map(Bankai::getPersonnage)
+                .distinct()
+                .collect(Collectors.toList());
     }
+
     public List<Character> getCharactersWithQuotes() {
-        return citationRepository.findCharactersWithQuotes();
+        return dataLoader.getCitations().stream()
+                .map(Citation::getPersonnage)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     public List<Character> getCharactersWithTechniques() {
-        return techniqueRepository.findCharactersWithTechnique();
+        return dataLoader.getTechniques().stream()
+                .map(Technique::getPersonnage)
+                .distinct()
+                .collect(Collectors.toList());
     }
-
-
 }

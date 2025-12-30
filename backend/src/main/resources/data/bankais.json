@@ -1,0 +1,358 @@
+[ {
+  "id" : 1,
+  "nom" : "Tensa Zangetsu",
+  "type" : "Vitesse / Compression de Reiatsu",
+  "personnage" : {
+    "id" : 1,
+    "name" : "Ichigo Kurosaki",
+    "gender" : "Homme",
+    "age" : "17",
+    "race" : "Humain, Shinigami, Hollow, Fullbringer, Quincy",
+    "affiliation" : "Ville de Karakura",
+    "evolutive_forms" : "Shikai, Bankai, Fullbring",
+    "rank" : "Lycéen, Shinigami remplaçant",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/ichigo",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 2,
+  "nom" : "Hakka no Togame",
+  "type" : "Glace / Zéro Absolu",
+  "personnage" : {
+    "id" : 2,
+    "name" : "Rukia Kuchiki",
+    "gender" : "Femme",
+    "age" : "150",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (13ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Vice-capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/rukia",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 3,
+  "nom" : "Sōō Zabimaru",
+  "type" : "Physique / Os de Babouin",
+  "personnage" : {
+    "id" : 3,
+    "name" : "Renji Abarai",
+    "gender" : "Homme",
+    "age" : "150",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (6ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Vice-capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/renji",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 4,
+  "nom" : "Shirafude Ichimonji",
+  "type" : "Encre / Réécriture de nom",
+  "personnage" : {
+    "id" : 27,
+    "name" : "Ichibei Hyōsube",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Division 0",
+    "evolutive_forms" : "True Name Release",
+    "rank" : "Chef de la Division 0",
+    "introduction_arc" : "Arc de la Guerre sanglante Millénaire",
+    "image" : "assets/img/ichibe",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 5,
+  "nom" : "Shatatsu Karagara Shigarami no Tsuji",
+  "type" : "Tissage / Manipulation de la réalité",
+  "personnage" : {
+    "id" : 28,
+    "name" : "Senjumaru Shutara",
+    "gender" : "Femme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Division 0",
+    "evolutive_forms" : "Inconnu",
+    "rank" : "Membre Division 0",
+    "introduction_arc" : "Arc de la Guerre sanglante Millénaire",
+    "image" : "assets/img/senjumaru",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 6,
+  "nom" : "Zanka no Tachi",
+  "type" : "Feu / Chaleur solaire (15 millions degrés)",
+  "personnage" : {
+    "id" : 38,
+    "name" : "Genryūsai Shigekuni Yamamoto",
+    "gender" : "Homme",
+    "age" : "2100+",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (1ère division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine-commandant",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/yamamoto",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 7,
+  "nom" : "Senbonzakura Kageyoshi",
+  "type" : "Lames multiples / Zone",
+  "personnage" : {
+    "id" : 4,
+    "name" : "Byakuya Kuchiki",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (6ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/byakuya",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 8,
+  "nom" : "Katen Kyōkotsu: Karamatsu Shinjū",
+  "type" : "Matérialisation de jeux / Réalité",
+  "personnage" : {
+    "id" : 9,
+    "name" : "Shunsui Kyoraku",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (1ère division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/shunsui",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 9,
+  "nom" : "Daiguren Hyōrinmaru",
+  "type" : "Glace / Gel des 4 éléments",
+  "personnage" : {
+    "id" : 7,
+    "name" : "Toshiro Hitsugaya",
+    "gender" : "Homme",
+    "age" : "100",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (10ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/toshiro",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 10,
+  "nom" : "Konjiki Ashisogi Jizō: Matai Fukuin Shōtai",
+  "type" : "Biologique / Adaptation constante",
+  "personnage" : {
+    "id" : 12,
+    "name" : "Mayuri Kurotsuchi",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (12ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/mayuri",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 11,
+  "nom" : "Sakashima Yokoshima Happōfusagari",
+  "type" : "Inversion / Manipulation mentale de zone",
+  "personnage" : {
+    "id" : 13,
+    "name" : "Shinji Hirako",
+    "gender" : "Homme",
+    "age" : "Unknown",
+    "race" : "Shinigami, Vizard",
+    "affiliation" : "Gotei 13 (5ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de l'Invasion des Arrancars",
+    "image" : "assets/img/shinji",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 12,
+  "nom" : "Jakuhō Raikōben",
+  "type" : "Missile / Explosif",
+  "personnage" : {
+    "id" : 32,
+    "name" : "Soi Fon",
+    "gender" : "Femme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (2ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/soifon",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 13,
+  "nom" : "Minazuki",
+  "type" : "Acide / Sang",
+  "personnage" : {
+    "id" : 46,
+    "name" : "Retsu Unohana",
+    "gender" : "Femme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (4ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/unohana",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 14,
+  "nom" : "Kokujō Tengen Myō'ō: Dangai Jōe",
+  "type" : "Armure géante / Lien vital sans armure",
+  "personnage" : {
+    "id" : 62,
+    "name" : "Sajin Komamura",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (7ème division)",
+    "evolutive_forms" : "Shikai, Bankai, Transformation humaine",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/komamura",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 15,
+  "nom" : "Kinshara Butōdan",
+  "type" : "Son / Illusion physique",
+  "personnage" : {
+    "id" : 53,
+    "name" : "Rōjūrō Ōtoribashi (Rose)",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Vizard",
+    "affiliation" : "Gotei 13 (3ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de l'Invasion des Arrancars",
+    "image" : "assets/img/rose",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 16,
+  "nom" : "Tekken Tachikaze",
+  "type" : "Vent / Impact explosif continu",
+  "personnage" : {
+    "id" : 44,
+    "name" : "Kensei Muguruma",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Vizard",
+    "affiliation" : "Gotei 13 (9ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de l'Invasion des Arrancars",
+    "image" : "assets/img/kensei",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 17,
+  "nom" : "Kamishini no Yari",
+  "type" : "Extension rapide / Poison cellulaire",
+  "personnage" : {
+    "id" : 43,
+    "name" : "Gin Ichimaru",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Ancien Gotei 13 (3ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/gin",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 18,
+  "nom" : "Suzumushi Tsuishiki: Enma Kōrogi",
+  "type" : "Privation sensorielle",
+  "personnage" : {
+    "id" : 42,
+    "name" : "Kaname Tōsen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien Gotei 13 (9ème division)",
+    "evolutive_forms" : "Resurrección",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/tosen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 19,
+  "nom" : "Kannonbiraki Benihime Aratame",
+  "type" : "Restructuration de la matière",
+  "personnage" : {
+    "id" : 8,
+    "name" : "Kisuke Urahara",
+    "gender" : "Homme",
+    "age" : "300",
+    "race" : "Shinigami",
+    "affiliation" : "Ville de Karakura",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Propriétaire d'un magasin",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/urahara",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 20,
+  "nom" : "Ryūmon Hōzukimaru",
+  "type" : "Physique / Puissance progressive",
+  "personnage" : {
+    "id" : 33,
+    "name" : "Ikkaku Madarame",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (11ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "3ème siège",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/ikkaku",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 21,
+  "nom" : "Kōkō Gonryō Rikyū",
+  "type" : "Foudre / Contrôle météo",
+  "personnage" : {
+    "id" : 69,
+    "name" : "Chōjirō Sasakibe",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (1ère division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Vice-capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/chojiro",
+    "indice_vitale" : null
+  }
+} ]

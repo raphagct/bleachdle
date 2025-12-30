@@ -12,7 +12,6 @@ import raph.dev.backend.service.DailyGuessService;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
 @RequestMapping("/api")
 public class CharacterController {
@@ -25,6 +24,7 @@ public class CharacterController {
 
     @GetMapping("/all")
     public List<Character> getAllCharacters() {
+        System.out.println("Backend received request for /api/all");
         return characterService.getAllCharacters();
     }
 
@@ -57,10 +57,12 @@ public class CharacterController {
     public List<Character> getCharactersWithBankai() {
         return characterService.getCharactersWithBankai();
     }
+
     @GetMapping("/quotes")
     public List<Character> getCharactersWithQuotes() {
         return characterService.getCharactersWithQuotes();
     }
+
     @GetMapping("/techniques")
     public List<Character> getCharactersWithTechniques() {
         return characterService.getCharactersWithTechniques();

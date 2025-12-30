@@ -91,7 +91,8 @@
               "buildTarget": "bleachdle:build:production"
             },
             "development": {
-              "buildTarget": "bleachdle:build:development"
+              "buildTarget": "bleachdle:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

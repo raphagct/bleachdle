@@ -6,10 +6,6 @@ import raph.dev.backend.model.Bankai;
 import raph.dev.backend.model.Character;
 import raph.dev.backend.model.Citation;
 import raph.dev.backend.model.Technique;
-import raph.dev.backend.repository.BankaiRepository;
-import raph.dev.backend.repository.ClassicRepository;
-import raph.dev.backend.repository.CitationRepository;
-import raph.dev.backend.repository.TechniqueRepository;
 
 import java.util.List;
 import java.util.Random;
@@ -18,38 +14,27 @@ import java.util.Random;
 public class DailyGuessService {
 
     @Autowired
-    private ClassicRepository classicRepository;
-
-    @Autowired
-    private BankaiRepository bankaiRepository;
-
-    @Autowired
-    private CitationRepository citationRepository;
-
-    @Autowired
-    private TechniqueRepository techniqueRepository;
-
+    private JsonDataLoader dataLoader;
 
     private final Random random = new Random();
 
     public Character getRandomCharacter() {
-        List<Character> characters = classicRepository.findAll();
-
+        List<Character> characters = dataLoader.getCharacters();
         return characters.get(random.nextInt(characters.size()));
     }
 
     public Bankai getRandomBankai() {
-        List<Bankai> bankaiList = bankaiRepository.findAll();
+        List<Bankai> bankaiList = dataLoader.getBankais();
         return bankaiList.get(random.nextInt(bankaiList.size()));
     }
 
     public Citation getRandomCitation() {
-        List<Citation> citationsList = citationRepository.findAll();
+        List<Citation> citationsList = dataLoader.getCitations();
         return citationsList.get(random.nextInt(citationsList.size()));
     }
 
     public Technique getRandomTechniques() {
-        List<Technique> techniquesList = techniqueRepository.findAll();
+        List<Technique> techniquesList = dataLoader.getTechniques();
         return techniquesList.get(random.nextInt(techniquesList.size()));
     }
 }

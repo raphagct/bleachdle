@@ -1,18 +1,10 @@
 package raph.dev.backend.model;
 
-import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-import java.util.List;
 
 @Data
-@Entity
-@Table(name = "personnages")
 public class Character {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

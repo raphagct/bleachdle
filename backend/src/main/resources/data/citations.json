@@ -1,0 +1,205 @@
+[ {
+  "id" : 1,
+  "contenu" : "Personne n'a jamais commencé au sommet du monde. Ni toi, ni moi, ni même Dieu. Mais ce vide insupportable sur le trône du ciel est révolu. Désormais, je me tiendrai au-dessus des cieux.",
+  "destinataire" : "Jūshirō Ukitake",
+  "personnage" : {
+    "id" : 37,
+    "name" : "Sōsuke Aizen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien capitaine du Gotei 13 (5ème division), Arc de l'Assaut du Hueco Mundo",
+    "evolutive_forms" : "Fusion Hōgyoku",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/aizen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 2,
+  "contenu" : "La perfection n'existe pas. Ce monde est imparfait. C'est pour ça qu'il est beau.",
+  "destinataire" : "Szayelaporro Granz",
+  "personnage" : {
+    "id" : 12,
+    "name" : "Mayuri Kurotsuchi",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (12ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/mayuri",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 3,
+  "contenu" : "Si je pouvais vivre cinq vies, je serais née dans cinq villes différentes, j'aurais mangé cinq plats différents, j'aurais eu cinq métiers différents... et je serais tombée amoureuse de la même personne, cinq fois.",
+  "destinataire" : "Ichigo Kurosaki",
+  "personnage" : {
+    "id" : 5,
+    "name" : "Orihime Inoue",
+    "gender" : "Femme",
+    "age" : "17",
+    "race" : "Humain",
+    "affiliation" : "Ville de Karakura",
+    "evolutive_forms" : "Aucune",
+    "rank" : "Lycéenne",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/orihime",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 4,
+  "contenu" : "Si je t'ouvre la poitrine, verrais-je ton cœur ? Si je t'ouvre le crâne, verrais-je tes espoirs ? C'est donc cela... un coeur.",
+  "destinataire" : "Orihime Inoue",
+  "personnage" : {
+    "id" : 22,
+    "name" : "Ulquiorra Cifer",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Arrancar",
+    "affiliation" : "Arc de l'Assaut du Hueco Mundo (Espada #4)",
+    "evolutive_forms" : "Resurrección, Segunda Etapa",
+    "rank" : "Espada #4",
+    "introduction_arc" : "Arc de l'Assaut du Hueco Mundo",
+    "image" : "assets/img/ulquiorra",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 5,
+  "contenu" : "Si tu te transformais en serpent demain et que tu commençais à dévorer des humains, et qu'avec cette même bouche tu me disais \"Je t'aime\", serais-je encore capable de dire \"Je t'aime\" en retour ?",
+  "destinataire" : "Rangiku Matsumoto",
+  "personnage" : {
+    "id" : 43,
+    "name" : "Gin Ichimaru",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami",
+    "affiliation" : "Ancien Gotei 13 (3ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/gin",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 6,
+  "contenu" : "À partir du moment où l'on entre en guerre, les deux camps sont en tort.",
+  "destinataire" : "Coyote Starrk",
+  "personnage" : {
+    "id" : 9,
+    "name" : "Shunsui Kyoraku",
+    "gender" : "Homme",
+    "age" : "200",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (1ère division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/shunsui",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 7,
+  "contenu" : "Pourquoi penses-tu que je suis le capitaine-commandant du Gotei 13 depuis mille ans ? C'est parce qu'aucun Shinigami plus fort que moi n'est né durant tout ce temps.",
+  "destinataire" : "Sōsuke Aizen",
+  "personnage" : {
+    "id" : 38,
+    "name" : "Genryūsai Shigekuni Yamamoto",
+    "gender" : "Homme",
+    "age" : "2100+",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (1ère division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Capitaine-commandant",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/yamamoto",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 8,
+  "contenu" : "Pourquoi penses-tu que je mens ? Est-ce que j'ai l'air de mentir ? Ou est-ce que tu as peur que je dise la vérité ?",
+  "destinataire" : "Shinji Hirako",
+  "personnage" : {
+    "id" : 37,
+    "name" : "Sōsuke Aizen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien capitaine du Gotei 13 (5ème division), Arc de l'Assaut du Hueco Mundo",
+    "evolutive_forms" : "Fusion Hōgyoku",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/aizen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 9,
+  "contenu" : "Tu pensais vraiment que ta rencontre avec Rukia Kuchiki était un hasard ? Tout ce qui t'est arrivé, chacun de tes combats, c'est moi qui les ai planifiés depuis le début.",
+  "destinataire" : "Ichigo Kurosaki",
+  "personnage" : {
+    "id" : 37,
+    "name" : "Sōsuke Aizen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien capitaine du Gotei 13 (5ème division), Arc de l'Assaut du Hueco Mundo",
+    "evolutive_forms" : "Fusion Hōgyoku",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/aizen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 10,
+  "contenu" : "Si la justice ne suffit pas à vaincre le mal, alors je deviendrai un mal capable de vaincre le mal. C'est cela, ma justice.",
+  "destinataire" : "Sajin Komamura",
+  "personnage" : {
+    "id" : 42,
+    "name" : "Kaname Tōsen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien Gotei 13 (9ème division)",
+    "evolutive_forms" : "Resurrección",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/tosen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 11,
+  "contenu" : "Ceux qui ne connaissent pas la peur ne sont pas aptes à combattre.",
+  "destinataire" : "Shūhei Hisagi",
+  "personnage" : {
+    "id" : 42,
+    "name" : "Kaname Tōsen",
+    "gender" : "Homme",
+    "age" : "Inconnu",
+    "race" : "Shinigami, Hollow",
+    "affiliation" : "Ancien Gotei 13 (9ème division)",
+    "evolutive_forms" : "Resurrección",
+    "rank" : "Ancien Capitaine",
+    "introduction_arc" : "Arc de la Soul Society",
+    "image" : "assets/img/tosen",
+    "indice_vitale" : null
+  }
+}, {
+  "id" : 12,
+  "contenu" : "Je me souviens... Quand je t'ai rencontré pour la première fois, la pluie qui tombait dans mon cœur s'est arrêtée.",
+  "destinataire" : "Ichigo Kurosaki",
+  "personnage" : {
+    "id" : 2,
+    "name" : "Rukia Kuchiki",
+    "gender" : "Femme",
+    "age" : "150",
+    "race" : "Shinigami",
+    "affiliation" : "Gotei 13 (13ème division)",
+    "evolutive_forms" : "Shikai, Bankai",
+    "rank" : "Vice-capitaine",
+    "introduction_arc" : "Prélude",
+    "image" : "assets/img/rukia",
+    "indice_vitale" : null
+  }
+} ]
